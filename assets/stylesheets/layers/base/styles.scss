@@ -1,0 +1,94 @@
+html {height: 100%;}
+
+img {
+  max-width: 100%;
+  &[width],
+  &[height] {max-width: none;}
+}
+
+figure > img {display: block;}
+
+th, td {@include prefixes(box-sizing, border-box);}
+
+
+
+//****************************************************************************************************
+//
+// .. PROPERTIES
+//
+//****************************************************************************************************
+//
+// .. Float
+//
+.f-l {float: left;}
+.f-r {float: right;}
+
+//
+// .. Overflow
+//
+.o-h  {overflow: hidden;}
+.ox-h {
+  -ms-overflow-x: hidden;
+      overflow-x: hidden;
+}
+.oy-h {
+  -ms-overflow-y: hidden;
+      overflow-y: hidden;
+}
+
+//
+// .. Position
+//
+.p-r {position: relative;}
+
+//
+// .. Visibility
+//
+.v-hidden  {visibility: hidden;}
+.v-visible {visibility: visible;}
+
+//
+// .. White-space
+//
+.ws-nowrap {white-space: nowrap;}
+
+
+
+//****************************************************************************************************
+//
+// .. HELPERS
+//
+//****************************************************************************************************
+//
+// .. Center
+//
+.b-center {
+  display: block !important;
+  margin-right: auto !important;
+  margin-left:  auto !important;
+}
+
+//
+// .. Clearfix
+//
+.cf::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+//
+// .. Container
+//
+.ctn {
+  display: block;
+  margin-right: auto;
+  margin-left:  auto;
+  padding-right: $ctn-padding;
+  padding-left:  $ctn-padding;
+  @if $grid == "fixed" {width: #{$grid-fixed-ctn-width};}
+  @if $grid == "fluid" {
+    min-width: $mq-desktop-min-width;
+    max-width: $mq-desktop-max-width;
+  }
+}

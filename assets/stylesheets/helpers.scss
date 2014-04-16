@@ -1,0 +1,55 @@
+//****************************************************************************************************
+//
+// .. GRID
+//
+//****************************************************************************************************
+$grid-fixed-ctn-width:  ($grid-fixed-col-width + $grid-fixed-col-gutter) * $grid-fixed-col-qty - $grid-fixed-col-gutter;
+
+
+
+//****************************************************************************************************
+//
+// .. MIXINS
+//
+//****************************************************************************************************
+@mixin media-query($media-query) {
+  @if $media-query == "phone" {
+    @media all and (max-width: $mq-phone-max-width) {@content;}
+  }
+  @if $media-query == "tablet" {
+    @media all and (min-width: $mq-tablet-min-width) and (max-width: $mq-tablet-max-width) {@content;}
+  }
+  @if $media-query == "desktop" {
+    @media all and (min-width: $mq-desktop-min-width) {@content;}
+  }
+}
+
+// .. Used in development. In production compiled CSS passed through autoprefixer (https://github.com/ai/autoprefixer)
+@mixin prefixes($property, $value) {
+  -webkit-#{$property}: $value;
+     -moz-#{$property}: $value;
+      -ms-#{$property}: $value;
+       -o-#{$property}: $value;
+          #{$property}: $value;
+}
+
+@mixin linear-gradient($direction, $start, $end) {
+  background: $start;
+  @if ($direction == "horizontal") {
+    background: -webkit-linear-gradient(left, $start 0%, $end 100%);
+    background:         linear-gradient(to right, $start 0%, $end 100%);
+  }
+  @else if ($direction == "vertical") {
+    background: -webkit-linear-gradient(top, $start 0%, $end 100%);
+    background:         linear-gradient(to bottom, $start 0%, $end 100%);
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. PHANTOM
+//
+//****************************************************************************************************
+%focus-style {box-shadow: 0 0 .1rem .1rem rgba(41,128,185,.66);}

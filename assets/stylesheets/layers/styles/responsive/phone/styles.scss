@@ -1,0 +1,11 @@
+@if $grid == "responsive" {
+  
+  html {font-size: nth($root-font-size-list, 3);}
+
+  body {min-width: $mq-phone-min-width;}
+  
+  @include body(3);
+
+  @include headers(3);
+  
+}

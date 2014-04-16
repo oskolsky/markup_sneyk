@@ -1,0 +1,35 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Sneyk Demo
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+    :css
+      .demo {margin-left: 6rem;}
+      .demo li:not(:last-child) {margin-bottom: 1rem;}
+      .demo ol {counter-reset: list;}
+      .demo ol li {position: relative;}
+      .demo ol li::before {
+        counter-increment: list;
+        content: counter(list) ".";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        margin-right: .5rem;
+        color: #ccc;
+      }
+  
+  %body#page.page
+    %main#main.main{role: "main"}
+      %section{role: "region", "aria-label" => "Demo"}
+        .ctn.p-t_8.p-b_8
+          %article
+            %header.m-b_4
+              %h3
+                %a.a.__inner{href: "/"}
+                  %i.fa.fa-flask
+                  %span Sneyk
+
+            %nav.demo
+              %ol
+                %li 
+                  %a{href: "/"} Index

@@ -1,0 +1,11 @@
+@if $grid == "responsive" {
+
+  html {font-size: nth($root-font-size-list, 2);}
+
+  body {min-width: $mq-tablet-min-width;}
+  
+  @include body(2);
+
+  @include headers(2);
+
+}

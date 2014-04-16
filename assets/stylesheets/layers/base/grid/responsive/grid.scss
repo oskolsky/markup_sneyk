@@ -1,0 +1,112 @@
+@mixin grid-responsive($media: "", $classname: "", $property: "", $indent: "") {
+  @for $i from 1 through $grid-responsive-col-qty {
+    @for $j from 1 through $i {
+      $result: 100% / $i * $j;
+      &.__#{$media}-#{$classname}-#{$j}-#{$i} {#{$property}: $result + $indent;}
+    }
+  }
+}
+
+@mixin cols-responsive($media: "") {
+  @for $i from 2 through 4 {
+    &.__#{$media}-cols-#{$i} {@include prefixes(column-count, $i);}
+  }
+}
+
+@if $grid == "responsive" {
+  //
+  // .. Grid
+  //
+  .grid {
+    &.__no-gutter {
+      margin-bottom: 0;
+      margin-left: 0;
+      > .grid-i {
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+    }
+    margin-bottom: -$grid-responsive-col-indent;
+    margin-left: -$grid-responsive-col-gutter;
+    > .grid-i {
+      margin-bottom: $grid-responsive-col-indent;
+      margin-left: $grid-responsive-col-gutter;
+    }
+  }
+  
+  //
+  // .. Desktop
+  //
+  @include media-query(desktop) {
+    .grid {
+      &.__no-gutter {
+        > .grid-i {
+          @include grid-responsive("desktop", "grid", "width", 0);
+          @include grid-responsive("desktop", "prefix", "margin-left", 0);
+          @include grid-responsive("desktop", "suffix", "margin-right", 0);
+        }
+      }
+      > .grid-i {
+        @include grid-responsive("desktop", "prefix", "margin-left", $grid-responsive-col-gutter);
+        @include grid-responsive("desktop", "suffix", "margin-right", 0);
+      }
+    }
+
+    .grid-i {
+      @include grid-responsive("desktop", "grid", "width", -$grid-responsive-col-gutter);
+    }
+
+    .tx {@include cols-responsive("desktop");}
+  }
+
+  //
+  // .. Tablet
+  //
+  @include media-query(tablet) {
+    .grid {
+      &.__no-gutter {
+        > .grid-i {
+          @include grid-responsive("tablet", "grid", "width", 0);
+          @include grid-responsive("tablet", "prefix", "margin-left", 0);
+          @include grid-responsive("tablet", "suffix", "margin-right", 0);
+        }
+      }
+      > .grid-i {
+        @include grid-responsive("tablet", "prefix", "margin-left", $grid-responsive-col-gutter);
+        @include grid-responsive("tablet", "suffix", "margin-right", 0);
+      }
+      
+    }
+
+    .grid-i {
+      @include grid-responsive("tablet", "grid", "width", -$grid-responsive-col-gutter);
+    }
+
+    .tx {@include cols-responsive("tablet");}
+  }
+
+  //
+  // .. Phone
+  //
+  @include media-query(phone) {
+    .grid {
+      &.__no-gutter {
+        > .grid-i {
+          @include grid-responsive("phone", "grid", "width", 0);
+          @include grid-responsive("phone", "prefix", "margin-left", 0);
+          @include grid-responsive("phone", "suffix", "margin-right", 0);
+        }
+      }
+      > .grid-i {
+        @include grid-responsive("phone", "prefix", "margin-left", $grid-responsive-col-gutter);
+        @include grid-responsive("phone", "suffix", "margin-right", 0);
+      }
+    }
+
+    .grid-i {
+      @include grid-responsive("phone", "grid", "width", -$grid-responsive-col-gutter);
+    }
+
+    .tx {@include cols-responsive("phone");}
+  }
+}

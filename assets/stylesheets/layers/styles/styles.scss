@@ -1,0 +1,200 @@
+@mixin body($list) {
+  body {
+    font-size: nth($base-font-size-list, $list);
+    line-height: nth($base-line-height-list, $list);
+  }
+}
+
+@mixin headers($list) {
+  h1, .alpha {
+    font: {
+      weight: nth($h1-font-weight-list, $list);
+      size: nth($h1-font-size-list, $list); 
+    }
+    line-height: nth($h1-line-height-list, $list);
+  }
+  h2, .beta {
+    font: {
+      weight: nth($h2-font-weight-list, $list);
+      size: nth($h2-font-size-list, $list);
+    }
+    line-height: nth($h2-line-height-list, $list);
+  }
+  h3, .gamma {
+    font: {
+      weight: nth($h3-font-weight-list, $list);
+      size: nth($h3-font-size-list, $list);
+    }
+    line-height: nth($h3-line-height-list, $list);
+  }
+  h4, .delta {
+    font: {
+      weight: nth($h4-font-weight-list, $list);
+      size: nth($h4-font-size-list, $list);
+    }
+    line-height: nth($h4-line-height-list, $list);
+  }
+  h5, .epsilon {
+    font: {
+      weight: nth($h5-font-weight-list, $list);
+      size: nth($h5-font-size-list, $list);
+    }
+    line-height: nth($h5-line-height-list, $list);
+  }
+  h6, .zeta {
+    font: {
+      weight: nth($h6-font-weight-list, $list);
+      size: nth($h6-font-size-list, $list);
+    }
+    line-height: nth($h6-line-height-list, $list);
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. STYLES
+//
+//****************************************************************************************************
+html {
+  @if $grid == "fixed" or $grid == "fluid" {font-size: nth($root-font-size-list, 1);}
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+body {
+  @if $grid == "fixed" {min-width: $grid-fixed-ctn-width + $ctn-padding * 2;}
+  @if $grid == "fluid" {min-width: $mq-desktop-min-width + $ctn-padding * 2;}
+  background: $base-bg;
+  color: $base-color;
+  font: {
+    weight: $base-font-weight;
+    family: $base-font-family;
+  }
+}
+
+@if $grid == "fixed" or $grid == "fluid" {@include body(1);}
+
+img {font-style: italic;}
+
+
+
+//****************************************************************************************************
+//
+// .. HEADINGS
+//
+//****************************************************************************************************
+h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
+  font-family: $h-font-family;
+  &.format-money > i,
+   .format-money > i {font-size: 85%;}
+}
+
+@if $grid == "fixed" or $grid == "fluid" {@include headers(1);}
+
+
+
+//****************************************************************************************************
+//
+// .. PROPERTIES
+//
+//****************************************************************************************************
+//
+// .. Cursors
+//
+.c-d {cursor: default;}
+.c-p {cursor: pointer;}
+
+//
+// .. Vertical-align
+//
+.va-bl {vertical-align: baseline;}
+.va-t  {vertical-align: top;}
+.va-m  {vertical-align: middle;}
+.va-b  {vertical-align: bottom;}
+
+
+
+//****************************************************************************************************
+//
+// .. HELPERS
+//
+//****************************************************************************************************
+//
+// .. Currency
+//
+.format-money {
+  white-space: nowrap;
+  > i {font-size: 95%;}
+}
+
+//
+// .. Numbered list
+//
+.numbered {list-style: decimal outside;}
+
+//
+// .. Round
+//
+.round {border-radius: 50%;}
+
+//
+// .. Text
+//
+.tx {
+  &[class*="__cols-"] {@include prefixes(column-gap, 2%);}
+  
+  @for $i from 2 through 4 {
+    @if $grid == "fixed" or $grid == "fluid" {&.__cols-#{$i} {@include prefixes(column-count, $i);}}
+  }
+
+  &.__major {color: $major-color;}
+  &.__minor {color: $minor-color;}
+  &.__voice {color: $voice-color;}
+  &.__muted {color: $muted-color;}
+
+  @for $i from 1 through 9 {
+    $i: $i * 100;
+    &.__#{$i} {font-weight: $i;}
+  }
+
+  &.__i {font-style: italic;}
+
+  &.__xxs {
+    font-size: $tx-xxs-font-size;
+    line-height: $tx-xxs-line-height;
+  }
+  &.__xs {
+    font-size: $tx-xs-font-size;
+    line-height: $tx-xs-line-height;
+  }
+  &.__s {
+    font-size: $tx-s-font-size;
+    line-height: $tx-s-line-height;
+  }
+  &.__m {
+    font-size: $tx-m-font-size;
+    line-height: $tx-m-line-height;
+  }
+  &.__l {
+    font-size: $tx-l-font-size;
+    line-height: $tx-l-line-height;
+  }
+  &.__xl {
+    font-size: $tx-xl-font-size;
+    line-height: $tx-xl-line-height;
+  }
+  &.__xxl {
+    font-size: $tx-xxl-font-size;
+    line-height: $tx-xxl-line-height;
+  }
+
+  &.__left   {text-align: left;}
+  &.__center {text-align: center;}
+  &.__right  {text-align: right;}
+  
+  &.__cap   {text-transform: capitalize;}
+  &.__lower {text-transform: lowercase;}
+  &.__upper {text-transform: uppercase;}
+}

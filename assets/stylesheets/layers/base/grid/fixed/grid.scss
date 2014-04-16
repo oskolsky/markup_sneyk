@@ -1,0 +1,51 @@
+@mixin grid-fixed($classname, $property, $gutter1, $gutter2) {
+  $result: 0;
+  @for $i from 1 through $grid-fixed-col-qty {
+    $result: $result + (($grid-fixed-ctn-width + $gutter2) / $grid-fixed-col-qty);
+    #{$classname}-#{$i} {#{$property}: $result + $gutter1;}
+  }
+}
+
+@if $grid == "fixed" {
+  //
+  // .. Grid
+  //
+  .grid {
+    &.__no-gutter {
+      margin-bottom: 0;
+      margin-left: 0;
+      > .grid-i[class*="__grid-"] {
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+      @include grid-fixed("> .grid-i.__grid", "width", 0, 0);
+    }
+    margin-bottom: -#{$grid-fixed-col-indent};
+    margin-left: -#{$grid-fixed-col-gutter};
+    > .grid-i[class*="__grid-"] {
+      margin-bottom: #{$grid-fixed-col-indent};
+      margin-left: #{$grid-fixed-col-gutter};
+    }
+  }
+  @include grid-fixed(".grid-i.__grid", "width", -$grid-fixed-col-gutter, $grid-fixed-col-gutter);
+
+  //
+  // .. Prefix
+  //
+  .grid {
+    &.__no-gutter {
+      @include grid-fixed("> .grid-i.__prefix", "margin-left", 0, 0);
+    }
+    @include grid-fixed(".grid-i.__prefix", "margin-left", $grid-fixed-col-gutter, $grid-fixed-col-gutter);
+  }
+  
+  //
+  // .. Suffix
+  //
+  .grid {
+    &.__no-gutter {
+      @include grid-fixed("> .grid-i.__suffix", "margin-right", 0, 0);
+    }
+    @include grid-fixed(".grid-i.__suffix", "margin-right", 0, $grid-fixed-col-gutter);
+  }
+}

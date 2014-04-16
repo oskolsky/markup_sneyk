@@ -1,0 +1,173 @@
+//****************************************************************************************************
+//
+// .. FONTS
+//
+//****************************************************************************************************
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic);
+
+
+
+//****************************************************************************************************
+//
+// .. MEDIA QUERY
+//
+//****************************************************************************************************
+$mq-phone-min-width:   320px;
+$mq-phone-max-width:   640px;
+$mq-tablet-min-width:  641px;
+$mq-tablet-max-width:  940px;
+$mq-desktop-min-width: 941px;
+$mq-desktop-max-width: 1180px;
+
+
+
+//****************************************************************************************************
+//
+// .. CONTAINER
+//
+//****************************************************************************************************
+$ctn-padding: 20px;
+
+
+
+//****************************************************************************************************
+//
+// .. GRID
+//
+//****************************************************************************************************
+$grid: fixed; // .. fixed / fluid / responsive
+$grid-width-transition: false; // .. true / false
+
+//
+// .. Fixed
+//
+$grid-fixed-col-qty:    12;
+$grid-fixed-col-width:  60px;
+$grid-fixed-col-gutter: 20px;
+$grid-fixed-col-indent: 20px;
+
+//
+// .. Fluid
+//
+$grid-fluid-col-qty:    12;
+$grid-fluid-col-gutter: 2%;
+$grid-fluid-col-indent: 2rem; // .. rem / px
+
+//
+// .. Responsive
+//
+$grid-responsive-col-qty:    12;
+$grid-responsive-col-gutter: 2%;
+$grid-responsive-col-indent: 2rem; // .. rem / px
+
+
+
+//****************************************************************************************************
+//
+// .. STYLES
+//
+//****************************************************************************************************
+//
+// .. Html
+//
+$root-font-size-list: (62.5%, 57.5%, 52.5%); // .. desktop / tablet / phone
+
+//
+// .. Body
+//
+$base-bg: #fff;
+$base-color: #333;
+$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+$base-font-size-list: (1.4rem, 1.4rem, 1.4rem);
+$base-font-weight: 400;
+$base-line-height-list: (2rem, 2rem, 2rem);
+
+//
+// .. Headings
+//
+$h-font-family: $base-font-family;
+
+$h1-font-size-list: (4rem, 4rem, 4rem);
+$h2-font-size-list: (3rem, 3rem, 3rem);
+$h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
+$h4-font-size-list: (2rem, 2rem, 2rem);
+$h5-font-size-list: (inherit, inherit, inherit);
+$h6-font-size-list: (inherit, inherit, inherit);
+
+$h1-font-weight-list: (600, 600, 600);
+$h2-font-weight-list: (600, 600, 600);
+$h3-font-weight-list: (600, 600, 600);
+$h4-font-weight-list: (600, 600, 600);
+$h5-font-weight-list: (600, 600, 600);
+$h6-font-weight-list: (inherit, inherit, inherit);
+
+$h1-line-height-list: (4rem, 4rem, 4rem);
+$h2-line-height-list: (3.2rem, 3.2rem, 3.2rem);
+$h3-line-height-list: (2.8rem, 2.8rem, 2.8rem);
+$h4-line-height-list: (2.4rem, 2.4rem, 2.4rem);
+$h5-line-height-list: (inherit, inherit, inherit);
+$h6-line-height-list: (inherit, inherit, inherit);
+
+//
+// .. Colors
+//
+$major-color: #333;
+$minor-color: #eee;
+$voice-color: #000;
+$muted-color: #ccc;
+
+//
+// .. Focus
+//
+$focus: true; // .. true / false
+
+//
+// .. Links
+//
+$link-color: #2980b9;
+$link-color-hover: #ccc;
+$link-color-active: darken($link-color-hover, 10%);
+$link-style: un;        // .. nn / uu / un / nu
+$link-style-pseudo: uu; // .. nn / uu / un
+
+//
+// .. Content styles
+//
+$content-factor: 2;
+$content-link: false; // .. true / false
+$content-link-color: #0000cd;
+$content-link-color-hover: #ccc;
+$content-link-color-active: darken($content-link-color-hover, 10%);
+
+//
+// .. Text
+//
+$tx-xxs-font-size:   70%;
+$tx-xxs-line-height: 160%;
+
+$tx-xs-font-size:    80%;
+$tx-xs-line-height:  160%;
+
+$tx-s-font-size:     90%;
+$tx-s-line-height:   160%;
+
+$tx-m-font-size:     100%;
+$tx-m-line-height:   160%;
+
+$tx-l-font-size:     110%;
+$tx-l-line-height:   160%;
+
+$tx-xl-font-size:    120%;
+$tx-xl-line-height:  160%;
+
+$tx-xxl-font-size:   130%;
+$tx-xxl-line-height: 160%;
+
+
+
+//****************************************************************************************************
+//
+// .. COMPONENTS
+//
+//****************************************************************************************************
+$components: true; // .. true / false

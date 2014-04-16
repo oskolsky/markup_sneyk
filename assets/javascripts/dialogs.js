@@ -1,0 +1,4 @@
+$('.form').customForm();
+
+formatNumber();
+formatMoney();

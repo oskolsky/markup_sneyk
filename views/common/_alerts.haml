@@ -1,0 +1,14 @@
+:css
+  .alert-no-js {display: none;}
+  .no-js .alert-no-js {display: block;}
+.alert-no-js.c-alert.__l.c-bg.__red{role: "alert"}
+  %h1 У вас отключен JavaScript.
+
+/ [if lt IE 9]
+  %div{role: "alert", style: "padding: 30px; background-color: #2980b9; text-align: center;"}
+    %h1{style: "color: #fff; font-size: 40px; line-height: 1.5;"}
+      Использование устаревшего браузера
+      %br
+      повышает риск взлома вашего компьютера.
+      %br
+      %a{href: "http://browsehappy.com/", target: "_blank", style: "color: #fff; text-decoration: underline;"} Обновите свой браузер!

@@ -1,0 +1,6 @@
+@for $i from 0 through 20 {
+  .m-t_#{$i} {margin-top:     #{$i}rem !important;}
+  .m-b_#{$i} {margin-bottom:  #{$i}rem !important;}
+  .p-t_#{$i} {padding-top:    #{$i}rem !important;}
+  .p-b_#{$i} {padding-bottom: #{$i}rem !important;}
+}

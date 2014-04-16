@@ -1,0 +1,12 @@
+@if $grid == "responsive" {
+
+  .ctn {
+    min-width: $mq-desktop-min-width - $ctn-padding * 2;
+    max-width: $mq-desktop-max-width - $ctn-padding * 2;
+  }
+
+  .visible-phone,
+  .visible-tablet,
+  .hidden-desktop {display: none !important;}
+  
+}

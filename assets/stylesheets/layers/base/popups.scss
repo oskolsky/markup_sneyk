@@ -1,0 +1,5 @@
+.popup {
+  position: absolute;
+  z-index: 1001;
+  @include prefixes(box-sizing, border-box);
+}
