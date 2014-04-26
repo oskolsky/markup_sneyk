@@ -188,8 +188,7 @@
     .grid-i {margin-right: 0;}
   }
 
-  .owl-item:not(:last-child) &,
-  .grid-i:not(:last-child) & {border-right: 1px solid $border-color;}
+  .owl-item:not(:last-child) &, .grid-i:not(:last-child) & {border-right: 1px solid $border-color;}
 }
   .product_h {
     margin-bottom: 2rem;
@@ -264,15 +263,25 @@
   
 .carousel-nav {
   text-align: right;
+  &.__edge {
+    .carousel-nav_i {
+      position: absolute;
+      top: 50%;
+      @include prefixes(transform, translateY(-50%));
+      &.__prev {left:  -20px;}
+      &.__next {right: -20px;}
+    }   
+  }
 }
   .carousel-nav_i {
+    display: inline-block;
     vertical-align: top;
     cursor: pointer;
     @extend .ico;
     @extend .ico.__10x20;
-    &:not(:last-child) {margin-right: 2rem;}
     &.__prev {@extend .ico.__10x20.__chevron-left;}
     &.__next {@extend .ico.__10x20.__chevron-right;}
+    &:not(:last-child) {margin-right: 2rem;}
   }
 
 

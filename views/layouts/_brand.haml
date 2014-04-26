@@ -1,0 +1,12 @@
+%section.section{role: "region", "aria-label" => "Brand collection"}
+  .ctn
+    .p-r
+      .carousel-nav.__edge
+        .carousel-nav_i.__prev>
+        .carousel-nav_i.__next>
+      .carousel{data: {items: 6}}
+        - 1.upto(6) do
+          %a{href: "/catalog_brand.html"}
+            %img.va-t.c-bg.__light{src: "/assets/images/blank.gif", width: 163, height: 60, alt: ""}
+          %a{href: "/catalog_brand.html"}
+            %img.va-t.c-bg.__orange{src: "/assets/images/blank.gif", width: 163, height: 60, alt: ""}
