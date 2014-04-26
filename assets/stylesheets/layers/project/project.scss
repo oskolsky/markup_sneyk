@@ -269,9 +269,10 @@
     vertical-align: top;
     cursor: pointer;
     @extend .ico;
-    @extend .ico.__25;
-    &.__prev {@extend .ico.__25.__chevron-left;}
-    &.__next {@extend .ico.__25.__chevron-right;}
+    @extend .ico.__10x20;
+    &:not(:last-child) {margin-right: 2rem;}
+    &.__prev {@extend .ico.__10x20.__chevron-left;}
+    &.__next {@extend .ico.__10x20.__chevron-right;}
   }
 
 

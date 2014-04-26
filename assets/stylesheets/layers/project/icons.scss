@@ -13,7 +13,11 @@
     @include size(25, 25);
     background-image: url(/assets/images/icons/ico-25.png);
     &.__cart {background-position: 0 0;}
-    &.__chevron-left {background-position: -25px 0;}
-    &.__chevron-right {background-position: -50px 0;}
+  }
+  &.__10x20 {
+    @include size(10, 20);
+    background-image: url(/assets/images/icons/ico-10x20.png);
+    &.__chevron-left  {background-position: -0px 0;}
+    &.__chevron-right {background-position: -10px 0;}
   }
 }
