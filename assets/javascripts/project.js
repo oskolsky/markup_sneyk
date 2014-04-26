@@ -32,6 +32,12 @@ $(function() {
       return false;
     });
 
+    var owl = $carousel.data('owlCarousel');
+    
+    if (owl.itemsAmount <= $carousel.data('items')) {
+      $nav.hide();
+    }
+
   });
 
   //****************************************************************************************************
