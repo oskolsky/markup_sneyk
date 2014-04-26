@@ -1,0 +1,4 @@
+%footer#footer.footer{role: "contentinfo"}
+  = Haml::Engine.new(File.read('views/layouts/_footer_banners.haml')).render
+  = Haml::Engine.new(File.read('views/layouts/_footer_navs.haml')).render
+  = Haml::Engine.new(File.read('views/layouts/_footer_summary.haml')).render

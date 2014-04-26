@@ -1,0 +1,23 @@
+%article.product
+  %header.product_h
+    %a{href: "/catalog_show.html"}
+      %img.va-t{src: "/assets/images/fake/product-#{rand(1..4)}.jpg", width: 126, hjeight: 126, alt: "Ghost Tree Down Jacket"}
+
+    .product_labels
+      .product_label.__sale 
+        %span Распродажа
+      .product_label.__novelty 
+        %span Новинка
+
+    %ul.product_colors
+      %li.product_colors_i{style: "background-color: #662126;"}>
+      %li.product_colors_i{style: "background-color: #23283b;"}>
+      %li.product_colors_i{style: "background-color: #e6441d;"}>
+
+  %p.tx.__s.__upper.__700
+    %a.tx.__voice{href: "/catalog_brand.html"} Quiksilver
+  %p.gamma.tx.__upper 
+    %a{href: "/catalog_show.html"} Ghost Tree Down Jacket
+  %footer.product_f
+    %p.format-money.__rub
+      = rand(10000..99000)

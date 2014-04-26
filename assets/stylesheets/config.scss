@@ -103,7 +103,7 @@ $h6-font-weight-list: (inherit, inherit, inherit);
 
 $h1-line-height-list: (2.4rem, 2.4rem, 2.4rem);
 $h2-line-height-list: (2.4rem, 2.4rem, 2.4rem);
-$h3-line-height-list: (2.8rem, 2.8rem, 2.8rem);
+$h3-line-height-list: (2.4rem, 2.4rem, 2.4rem);
 $h4-line-height-list: (2.4rem, 2.4rem, 2.4rem);
 $h5-line-height-list: (inherit, inherit, inherit);
 $h6-line-height-list: (inherit, inherit, inherit);
@@ -113,8 +113,9 @@ $h6-line-height-list: (inherit, inherit, inherit);
 //
 $major-color: #ee3d3e;
 $minor-color: #279f30;
-$voice-color: #a3a3a3;
+$voice-color: rgba(0, 0, 0, .5);
 $muted-color: #f1f1f1;
+$border-color: #e9e9e9;
 
 //
 // .. Focus

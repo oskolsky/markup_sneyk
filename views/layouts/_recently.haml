@@ -1,0 +1,17 @@
+%section.section{role: "region", "aria-label" => "Recently viewed"}
+  .ctn
+    .p-t_6.p-b_3
+      .m-b_1
+        .grid
+          .grid-i.__grid-11.va-m>
+            %h3.tx.__upper Вы недавно смотрели:
+          .grid-i.__grid-1.va-m>
+            .carousel-nav
+              .carousel-nav_i.__prev>
+              .carousel-nav_i.__next>
+      .section_inner
+        .p-t_3.p-b_3
+          .products
+            .carousel{data: {items: 4}}
+              - 1.upto(10) do
+                = Haml::Engine.new(File.read('views/common/_product.haml')).render
