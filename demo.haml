@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: "ru-RU"}
   %head
-    %title Sneyk Demo
+    %title Demo / Sneyk
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
     :css
       .demo {margin-left: 6rem;}
@@ -30,18 +30,18 @@
             %nav.demo
               %ol
                 %li
-                  %a{href: "/index.html"} Главная
+                  %a.tx.__voice{href: "/index.html"} Главная
                 %li
-                  %a{href: "/catalog.html"} Каталог
+                  %a.tx.__voice{href: "/catalog.html"} Каталог
                 %li
-                  %a{href: "/catalog_brand.html"} Бренд
+                  %a.tx.__voice{href: "/catalog_brand.html"} Бренд
                 %li
-                  %a{href: "/catalog_show.html"} Карточка товара
+                  %a.tx.__voice{href: "/catalog_show.html"} Карточка товара
                 %li
-                  %a{href: "/basket.html"} Корзина
+                  %a.tx.__voice{href: "/basket.html"} Корзина
                 %li
-                  %a{href: "/basket_checkout.html"} Оформление заказа
+                  %a.tx.__voice{href: "/basket_checkout.html"} Оформление заказа
                 %li
-                  %a{href: "/profile.html"} Личный кабинет
+                  %a.tx.__voice{href: "/profile.html"} Личный кабинет
                 %li
-                  %a{href: "/content.html"} Контент
+                  %a.tx.__voice{href: "/content.html"} Контент
