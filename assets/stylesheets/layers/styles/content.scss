@@ -145,14 +145,19 @@
   }
 
   ol li,
-  ul li {margin: 0 0 #{$content-factor / 2}rem #{$content-factor * 2}rem;}
+  ul li {margin: 0 0 #{$content-factor / 2}rem #{$content-factor}rem;}
 
-  li {@extend %lists-nesting;}
+  li {
+    font-weight: 700;
+    @extend %lists-nesting;
+  }
 
   //
   // .. Headings
   //
   h1, h2, h3, h4, h5, h6 {
+    border-bottom: .2rem solid $base-color;
+    line-height: 2.4;
     &:not(:first-child) {margin-top: #{$content-factor * 2}rem;} 
   }
 

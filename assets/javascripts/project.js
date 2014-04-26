@@ -74,4 +74,9 @@ $(window).load(function() {
     $(this).find('.product').resizeToMaxHeight();
   });
 
+  //
+  // ..Set height sidebar & section
+  //
+  $('#sidebar, #section').resizeToMaxHeight();
+
 });

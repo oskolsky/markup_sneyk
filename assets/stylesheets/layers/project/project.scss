@@ -165,7 +165,57 @@
   .section_inner {
     background-color: #fff;
     box-shadow: 0 .1rem .1rem .1rem rgba(0, 0, 0, .1);
+    > .cnt {
+      padding: 2rem 3rem 4rem;
+    }
   }
+
+
+
+//****************************************************************************************************
+//
+// .. SIDEBAR
+//
+//****************************************************************************************************
+.sidebar {
+  padding: 2rem;
+  background-color: #212122;
+  color: #fff;
+  @include prefixes(box-sizing, border-box);
+}
+  .sidebar_t {
+    margin-bottom: 2rem;
+    border-bottom: .2rem solid #fff;
+    line-height: 2.4;
+  }
+
+  //
+  // .. Menu
+  //
+  .sidebar_menu {
+
+  }
+    .sidebar_menu_i {
+      &:not(:last-child) {
+        margin-bottom: .5rem;
+      }
+    }
+      .sidebar_menu_i_a {
+        display: inline-block;
+        padding: 0 .8rem;
+        height: 3rem;
+        border: .2rem solid transparent;
+        color: inherit;
+        text-transform: uppercase;
+        line-height: 3.4rem;
+        opacity: .8;
+        @extend .tx.__l;
+        &.__current, &:hover {
+          border-color: #fff;
+          color: inherit;
+          opacity: 1;
+        }
+      }
 
 
 
