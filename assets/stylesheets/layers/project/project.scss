@@ -200,30 +200,69 @@
 // :(
 //
 .footer {
-  padding: 3rem 0;
-  background-color: #212122;
   color: #f1f1f1;
-  line-height: 1.2rem;
   @extend .tx.__s;
-  p:first-child {margin-bottom: 1.2rem;}
-  a {
-    color: inherit;
-    &:hover {color: inherit;}
-  }
 }
-  .footer_logo, .footer_copyright, .footer_links {
-    display: inline-block;
-    vertical-align: top;
+  
+  //
+  // .. Banners
+  //
+  .footer_banners {
+    position: relative;
+    top: 6rem;
   }
-  .footer_logo {
-    margin-right: 2rem;
+  
+  //
+  // .. Catalog navs
+  //
+  .footer_navs {
+    padding: 11rem 0 6rem;
+    background-color: #29282c;
+    color: #fff;
+    table {
+      width: 100%;
+      td {
+        &:not(:last-child) {padding-right: 2rem;}
+        ul {
+          li {
+            line-height: 2.4rem;
+            a {
+              color: inherit;
+              opacity: .8;
+              @include prefixes(transition, all .33s);
+              &:hover {opacity: 1;}
+            }
+          }
+        }
+      }
+    }
   }
-  .footer_copyright {
-    margin-right: 6rem;
+    .footer_navs_t {
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      a {
+        color: #fff;
+      }
+    }
+  
+  //
+  // .. Summary information
+  //
+  .footer_summary {
+    padding: 3rem 0;
+    background-color: #212122;
+    line-height: 1.2rem;
+    table {
+      width: 100%;
+      td:not(:last-child) {padding-right: 2rem;}
+    }
+    p:first-child {margin-bottom: 1.2rem;}
+    a {
+      color: inherit;
+      &:hover {color: inherit;}
+    }
   }
-  .footer_links {
-    &:not(:last-child) {margin-right: 4.5rem;}
-  }
-  .footer_phone {
-    font-size: 2.4rem;
-  }
+    .footer_summary_phone {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem !important;
+    }

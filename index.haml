@@ -10,7 +10,8 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      %section{role: "region", "aria-label" => ""}
-        .ctn
+      .p-b_3.p-t_6
+        %section{role: "region", "aria-label" => ""}
+          .ctn
                   
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
