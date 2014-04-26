@@ -77,6 +77,6 @@ $(window).load(function() {
   //
   // ..Set height sidebar & section
   //
-  $('#sidebar, #section').resizeToMaxHeight();
+  $('.page.__content #sidebar, .page.__content #section').resizeToMaxHeight();
 
 });

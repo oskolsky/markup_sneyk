@@ -165,10 +165,16 @@
   .section_inner {
     background-color: #fff;
     box-shadow: 0 .1rem .1rem .1rem rgba(0, 0, 0, .1);
-    > .cnt {
-      padding: 2rem 3rem 4rem;
+    &.__padding {padding: 2rem 3rem 4rem;}
+    .grid {
+      margin-right: -3rem;
+      margin-left: -3rem;
     }
   }
+    .section_t {
+      margin-bottom: 2rem;
+      border-bottom: .2rem solid $base-color;
+    }
 
 
 
@@ -178,55 +184,73 @@
 //
 //****************************************************************************************************
 .sidebar {
-  padding: 2rem 3rem 2rem;
-  background-color: #212122;
-  color: #fff;
-  @include prefixes(box-sizing, border-box);
+  
+  
 }
-  .sidebar_t {
-    margin-bottom: 2rem;
-    border-bottom: .2rem solid #fff;
-  }
 
   //
-  // .. Menu
+  // .. Navigation
   //
-  .sidebar_menu {
-
+  .sidebar_nav {
+    padding: 2rem 3rem 5rem 2rem;
+    height: 100%;
+    background-color: #212122;
+    color: #fff;
+    @include prefixes(box-sizing, border-box);
   }
-    .sidebar_menu_i {
-      &:not(:last-child) {
-        margin-bottom: .5rem;
-      }
+    .sidebar_nav_t {
+      margin-bottom: 2rem;
+      border-bottom: .2rem solid #fff;
     }
-      .sidebar_menu_i_a {
-        display: inline-block;
-        padding: 0 .8rem;
-        height: 3rem;
-        border: .2rem solid transparent;
-        color: inherit;
-        text-transform: uppercase;
-        line-height: 3.4rem;
-        opacity: .8;
-        @extend .tx.__l;
-        &.__current, &:hover {
-          border-color: #fff;
-          color: inherit;
-          opacity: 1;
+    .sidebar_menu {
+
+    }
+      .sidebar_menu_i {
+        &:not(:last-child) {
+          margin-bottom: .5rem;
         }
       }
+        .sidebar_menu_i_a {
+          display: inline-block;
+          margin-left: -1rem;
+          padding: 0 .8rem;
+          height: 3rem;
+          border: .2rem solid transparent;
+          color: inherit;
+          line-height: 3rem;
+          opacity: .8;
+          @extend .tx.__l;
+          &.__current, &:hover {
+            border-color: #fff;
+            color: inherit;
+            opacity: 1;
+          }
+        }
 
 
 
 //****************************************************************************************************
 //
-// .. PRODUCTS
+// .. CATALOG PRODUCTS
 //
 //****************************************************************************************************
+//
+// .. Catalog
+//
+.catalog {
+  padding: 5rem 0 1rem;
+}
+
+//
+// .. Products
+//
 .products {
   &:not(:last-child) {margin-bottom: 3rem;}
 }
 
+//
+// .. Product
+//
 .product {
   position: relative;
   padding-bottom: 2.5rem;
@@ -370,6 +394,44 @@
     &:-moz-placeholder           {color: inherit;}
     &:-ms-input-placeholder      {color: inherit;}
   }
+
+//
+// .. Pagination
+//
+.pagination {
+  position: relative;
+  padding: 1rem 0;
+  background-color: #212122;
+  color: #fff;
+  text-align: center;
+}
+  .pagination_i {
+    display: inline-block;
+    &:not(:last-child) {margin-right: .5rem;}
+  }
+    .pagination_i_a {
+      display: block;
+      padding: 0 1rem;
+      height: 3.2rem;
+      border: .2rem solid transparent;
+      color: inherit;
+      line-height: 3rem;
+      @include prefixes(box-sizing, border-box);
+      &.__current, &:not(span):hover {
+        color: inherit;
+        border-color: #fff;
+      }
+    }
+  .pagination_direction {
+    position: absolute;
+    top: 50%;
+    height: 2rem;
+    line-height: 2rem;
+    @include prefixes(transform, translateY(-50%));
+    &.__prev {left:  3rem;}
+    &.__next {right: 3rem;}
+  }
+
 
 
 //****************************************************************************************************

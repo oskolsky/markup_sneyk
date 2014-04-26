@@ -1,0 +1,7 @@
+.catalog
+  - 1.upto(6) do
+    .products
+      .grid.__no-gutter
+        - 1.upto(3) do
+          .grid-i.__grid-3>
+            = Haml::Engine.new(File.read('views/common/_product.haml')).render

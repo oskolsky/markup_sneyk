@@ -10,9 +10,25 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      %section.section{role: "region", "aria-label" => ""}
-        .ctn
-                  
+      .ctn
+        .p-t_5
+          %p.gamma.m-b_1
+            %a{href: "#"} Бренды
+            = "/"
+            Adidas
+          .grid.__no-gutter
+            .grid-i.__grid-3>
+              %aside#sidebar.sidebar
+                = Haml::Engine.new(File.read('views/common/_catalog_nav.haml')).render
+
+            .grid-i.__grid-9>
+              %section#section.section{role: "region", "aria-label" => ""}
+                .section_inner.__padding
+                  %h1.section_t Теплые Куртки
+                  %img.va-t{src: "/assets/images/banner-adidas.png", width: "100%", alt: "Adidas"}
+                  = Haml::Engine.new(File.read('views/common/_catalog_products.haml')).render
+                = Haml::Engine.new(File.read('views/common/_catalog_pagination.haml')).render
+
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

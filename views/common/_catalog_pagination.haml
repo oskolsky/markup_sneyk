@@ -1,0 +1,18 @@
+%nav
+  %ul.pagination
+    %li.pagination_direction.__prev
+      %a{href: "#"}
+        %i.ico.__10x20.__chevron-left-white
+    %li.pagination_i>
+      %span.pagination_i_a.__current 1
+    - 2.upto(8) do |i|
+      %li.pagination_i>
+        %a.pagination_i_a{href: "#"}
+          = i
+    %li.pagination_i>
+      %span.pagination_i_a &hellip;
+    %li.pagination_i>
+      %a.pagination_i_a{href: "#"} 34
+    %li.pagination_direction.__next
+      %a{href: "#"}
+        %i.ico.__10x20.__chevron-right-white
