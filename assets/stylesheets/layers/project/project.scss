@@ -196,6 +196,34 @@
 // .. FOOTER
 //
 //****************************************************************************************************
+//
+// :(
+//
 .footer {
-
+  padding: 3rem 0;
+  background-color: #212122;
+  color: #f1f1f1;
+  line-height: 1.2rem;
+  @extend .tx.__s;
+  p:first-child {margin-bottom: 1.2rem;}
+  a {
+    color: inherit;
+    &:hover {color: inherit;}
+  }
 }
+  .footer_logo, .footer_copyright, .footer_links {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .footer_logo {
+    margin-right: 2rem;
+  }
+  .footer_copyright {
+    margin-right: 6rem;
+  }
+  .footer_links {
+    &:not(:last-child) {margin-right: 4.5rem;}
+  }
+  .footer_phone {
+    font-size: 2.4rem;
+  }
