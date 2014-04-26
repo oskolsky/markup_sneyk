@@ -12,11 +12,6 @@ h1, h2, h3, h4, h5, h6,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
   > a,
   > a > i,
-  > .a.__inner > span {
-    @if $link-style == un or $link-style == nu {
-      @include prefixes(transition, color .33s);
-    }
-  }
   > a,
   > .a.__inner > span {text-decoration: none;}
 }
@@ -33,12 +28,6 @@ h1, h2, h3, h4, h5, h6,
 // .. LINKS
 //
 //****************************************************************************************************
-@if $link-style == nn or $link-style == uu { 
-  
-  a {@include prefixes(transition, color .33s);} 
-
-}
-
 @if $link-style == nn {
   
   a, a:hover {text-decoration: none;}
@@ -75,7 +64,6 @@ h1, h2, h3, h4, h5, h6,
 
 @if $link-style-pseudo == nn {
   
-  .a.__pseudo { @include prefixes(transition, color .33s); }
   .a.__pseudo,
   .a.__pseudo:hover,
   .a.__pseudo.hover,
@@ -83,7 +71,6 @@ h1, h2, h3, h4, h5, h6,
 
 } @else if $link-style-pseudo == uu {
   
-  .a.__pseudo { @include prefixes(transition, #{border .33s, color .33s}); }
   .a.__pseudo,
   .a.__pseudo.__inner > span {border-bottom: .1em dotted $link-color;}
   .a.__pseudo:hover,
@@ -96,7 +83,6 @@ h1, h2, h3, h4, h5, h6,
 
 } @else if $link-style-pseudo == un {
   
-  .a.__pseudo { @include prefixes(transition, none); }
   .a.__pseudo,
   .a.__pseudo.__inner > span {border-bottom: .1em dotted $link-color;}
   .a.__pseudo.__inner,

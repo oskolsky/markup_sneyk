@@ -47,7 +47,7 @@
   .header_phone {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 2.5rem;
+    margin-right: 1.5rem;
   }
 
   //
@@ -59,7 +59,7 @@
   }
     .header_social_i {
       display: inline-block;
-      margin-left: .5rem;
+      margin-left: 1rem;
     }
       .header_social_i_a {
         color: inherit;
@@ -472,7 +472,6 @@
             a {
               color: inherit;
               opacity: .8;
-              @include prefixes(transition, all .33s);
               &:hover {opacity: 1;}
             }
           }
