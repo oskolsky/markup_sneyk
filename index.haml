@@ -7,6 +7,7 @@
   %body#page.page
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
       %section{role: "region", "aria-label" => ""}

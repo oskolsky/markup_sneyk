@@ -27,8 +27,8 @@ $.arcticmodal('setDefault', {
 accounting.settings = {
   currency: {
     decimal: '.',
-    thousand: ' ',
-    precision: 2
+    thousand: '.',
+    precision: 0
   },
   number: {
     decimal : '.',
@@ -186,7 +186,6 @@ $(function() {
   //****************************************************************************************************
   $(window).smartresize(function() {
 
-    $('#header').stickyHeader();
     $('#footer').stickyFooter();
 
   });
@@ -202,7 +201,6 @@ $(function() {
 //****************************************************************************************************
 $(window).load(function() {
 
-  $('#header').stickyHeader();
   $('#footer').stickyFooter();
 
 });

@@ -1,2 +1,66 @@
 %header#header.header{role: "banner"}
   .ctn
+    .header_bar
+      .grid
+
+        .grid-i.__grid-3>
+          .cf
+            .header_phone
+              8 800 
+              %b 987-65-43
+            %ul.header_social
+              %li.header_social_i>
+                %a.header_social_i_a{href: "#"}
+                  %i.fa.fa-vk
+              %li.header_social_i>
+                %a.header_social_i_a{href: "#"}
+                  %i.fa.fa-facebook
+              %li.header_social_i>
+                %a.header_social_i_a{href: "#"}
+                  %i.fa.fa-twitter
+
+        .grid-i.__grid-6>
+          %nav
+            %ul.header_menu.__left
+              %li.header_menu_i>
+                %a.header_menu_i_a{href: "/content.html"} О магазине
+              %li.header_menu_i>
+                %a.header_menu_i_a{href: "/content.html"} Гарантия
+              %li.header_menu_i>
+                %a.header_menu_i_a{href: "/content.html"} Доставка и оплата
+              %li.header_menu_i>
+                %a.header_menu_i_a{href: "/content.html"} Вопросы и ответы
+              %li.header_menu_i>
+                %a.header_menu_i_a{href: "/content.html"} Контакты
+
+        .grid-i.__grid-3>
+          %nav
+            %ul.header_menu.__right
+              %li.header_menu_i>
+                %a.header_menu_i_a{href: "/content.html"} 
+                  %i.fa.fa-play-circle-o>
+                  Личный кабинет
+              %li.header_menu_i>
+                %a.header_menu_i_a{href: "/content.html"} Регистрация
+
+    .p-t_3.p-b_3
+      .grid
+
+        .grid-i.__grid-3.va-m>
+          %a{href: "/"}
+            %img.va-t{src: "/assets/images/logo.png", width: 182, height: 37, alt: "the Sneyk"}
+
+        .grid-i.__grid-6.va-m>
+          %form.search
+            %i.fa.fa-search.search_ico
+            %input.search_tx{type: "text", placeholder: "Поиск товаров"}
+
+        .grid-i.__grid-3.va-m>
+          %p.header_basket
+            %i.ico.__25.__cart.va-m>
+            %a{href: "/basket.html"}
+              %b
+                6 товаров
+              на 
+              %b
+                %span.format-money.__rub 24500

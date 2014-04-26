@@ -4,6 +4,13 @@
 }
 
 
+//****************************************************************************************************
+//
+// .. BAR
+//
+//****************************************************************************************************
+
+
 
 //****************************************************************************************************
 //
@@ -11,6 +18,8 @@
 //
 //****************************************************************************************************
 .header {
+  background-color: #212122;
+  color: #f1f1f1;
   @include media-query(desktop) {
     &.__sticky {
       position: fixed;
@@ -24,6 +33,162 @@
   }
 }
 
+  //
+  // .. Bar
+  //
+  .header_bar {
+    padding: .5rem 0;
+    border-bottom: .1rem solid #2c2c2d;
+  }
+
+  //
+  // .. Phone
+  //
+  .header_phone {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2.5rem;
+  }
+
+  //
+  // .. Sosial navigation
+  //
+  .header_social {
+    display: inline-block;
+    vertical-align: middle;
+  }
+    .header_social_i {
+      display: inline-block;
+      margin-left: .5rem;
+    }
+      .header_social_i_a {
+        color: inherit;
+        &:hover {color: inherit;}
+      }
+
+  
+  //
+  // .. Menu
+  //
+  .header_menu {
+    &.__left {
+      text-align: left;
+      .header_menu_i {margin-right: 1rem;}
+    }
+    &.__right {
+      text-align: right;
+      .header_menu_i {margin-left: 1rem;}
+    }
+  }
+    .header_menu_i {
+      display: inline-block;
+    }
+      .header_menu_i_a {
+        color: inherit;
+        text-transform: uppercase;
+        @extend .tx.__s;
+        &:hover {color: inherit;}
+        .fa {
+          margin-right: .5rem;
+          font-size: 1.8rem;
+        }
+      }
+
+  //
+  // .. Go to basket
+  //
+  .header_basket {
+    text-align: right;
+    text-transform: uppercase;
+    @extend .tx.__l;
+    .ico {margin-right: 1rem;}
+    a {
+      display: inline-block;
+      border-bottom: .2rem solid #8f5cb1;
+      color: inherit;
+    }
+  }
+
+
+
+//****************************************************************************************************
+//
+// .. NAVIGATION
+//
+//****************************************************************************************************
+.nav {
+  height: 6.2rem;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #fff;
+}
+
+.menu {
+  &.__left {
+    text-align: left;
+    .menu_i {margin-right: 1.8rem;}
+  }
+  &.__right {
+    text-align: right;
+    .menu_i {margin-left: 1.8rem;}
+  }
+}
+  .menu_i {
+    display: inline-block;
+  }
+    .menu_i_a {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 6rem;
+      @extend .tx.__l;
+      &.__current, &:hover {border-bottom: .2rem solid $base-color;}
+      &.__sale {
+        border-color: $major-color;
+        color: $major-color;
+      }
+      &.__novelty {
+        border-color: $minor-color;
+        color: $minor-color;
+      }
+    }
+
+
+
+//****************************************************************************************************
+//
+// .. ELEMENTS
+//
+//****************************************************************************************************
+//
+// .. Search
+//
+.search {
+  position: relative;
+  color: rgba(241, 241, 241, .5);
+}
+  .search_ico {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    color: inherit;
+    @include prefixes(transform, translateY(-50%));
+  }
+  .search_tx {
+    display: block;
+    padding: 0 1.6rem 0 3.8rem;
+    width: 100%;
+    height: 3.2rem;
+    border-radius: .3rem;
+    background-color: #494949;
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: inherit;
+    &::-webkit-input-placeholder {color: inherit;}
+    &::-moz-placeholder          {color: inherit;}
+    &:-moz-placeholder           {color: inherit;}
+    &:-ms-input-placeholder      {color: inherit;}
+  }
 
 
 //****************************************************************************************************

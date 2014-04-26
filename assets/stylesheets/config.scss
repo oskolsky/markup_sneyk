@@ -3,7 +3,7 @@
 // .. FONTS
 //
 //****************************************************************************************************
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic);
 
 
 
@@ -42,8 +42,8 @@ $grid-width-transition: false; // .. true / false
 // .. Fixed
 //
 $grid-fixed-col-qty:    12;
-$grid-fixed-col-width:  60px;
-$grid-fixed-col-gutter: 20px;
+$grid-fixed-col-width:  65px;
+$grid-fixed-col-gutter: 18px;
 $grid-fixed-col-indent: 20px;
 
 //
@@ -75,12 +75,12 @@ $root-font-size-list: (62.5%, 57.5%, 52.5%); // .. desktop / tablet / phone
 //
 // .. Body
 //
-$base-bg: #fff;
-$base-color: #333;
-$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-$base-font-size-list: (1.4rem, 1.4rem, 1.4rem);
+$base-bg: #f1f1f1;
+$base-color: #29282c;
+$base-font-family: "PT Sans Narrow", Helvetica, Arial, sans-serif;
+$base-font-size-list: (1.6rem, 1.6rem, 1.6rem);
 $base-font-weight: 400;
-$base-line-height-list: (2rem, 2rem, 2rem);
+$base-line-height-list: (2.4rem, 2.4rem, 2.4rem);
 
 //
 // .. Headings
@@ -111,23 +111,23 @@ $h6-line-height-list: (inherit, inherit, inherit);
 //
 // .. Colors
 //
-$major-color: #333;
-$minor-color: #eee;
-$voice-color: #000;
-$muted-color: #ccc;
+$major-color: #ee3d3e;
+$minor-color: #279f30;
+$voice-color: #a3a3a3;
+$muted-color: #f1f1f1;
 
 //
 // .. Focus
 //
-$focus: true; // .. true / false
+$focus: false; // .. true / false
 
 //
 // .. Links
 //
-$link-color: #2980b9;
-$link-color-hover: #ccc;
-$link-color-active: darken($link-color-hover, 10%);
-$link-style: un;        // .. nn / uu / un / nu
+$link-color: $base-color;
+$link-color-hover: $base-color;
+$link-color-active: $base-color;
+$link-style: nn;        // .. nn / uu / un / nu
 $link-style-pseudo: uu; // .. nn / uu / un
 
 //
@@ -149,13 +149,13 @@ $tx-xs-font-size:    80%;
 $tx-xs-line-height:  160%;
 
 $tx-s-font-size:     90%;
-$tx-s-line-height:   160%;
+$tx-s-line-height:   inherit;
 
 $tx-m-font-size:     100%;
-$tx-m-line-height:   160%;
+$tx-m-line-height:   inherit;
 
 $tx-l-font-size:     110%;
-$tx-l-line-height:   160%;
+$tx-l-line-height:   inherit;
 
 $tx-xl-font-size:    120%;
 $tx-xl-line-height:  160%;

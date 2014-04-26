@@ -109,10 +109,10 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
 //
 // .. Vertical-align
 //
-.va-bl {vertical-align: baseline;}
-.va-t  {vertical-align: top;}
-.va-m  {vertical-align: middle;}
-.va-b  {vertical-align: bottom;}
+.va-bl {vertical-align: baseline !important;}
+.va-t  {vertical-align: top      !important;}
+.va-m  {vertical-align: middle   !important;}
+.va-b  {vertical-align: bottom   !important;}
 
 
 

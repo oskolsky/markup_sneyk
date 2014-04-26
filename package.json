@@ -2,7 +2,7 @@
   "name": "ChemistryTemplate",
   "version": "0.9.1",
   "devDependencies": {
-    "gulp": "~3.5.2",
+    "gulp": "^3.6.0",
     "gulp-clean": "~0.2.4",
     "gulp-ignore": "~1.0.0",
     "gulp-ruby-haml": "0.0.3",

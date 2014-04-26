@@ -9,16 +9,9 @@
     color: transparent;
     repeat: no-repeat;
   }
-  // &.__16 {
-  //   @include size(16, 16);
-  //   background-image: url(/assets/images/icons/ico-16.png);
-  //   &.__cat {background-position: 0 0;}
-  //   &.__dog {background-position: -16px 0;}
-  // }
-  // &.__32 {
-  //   @include size(32, 32);
-  //   background-image: url(/assets/images/icons/ico-32.png);
-  //   &.__eagle {background-position: 0 0;}
-  //   &.__stork {background-position: -32px 0;}
-  // }
+  &.__25 {
+    @include size(25, 25);
+    background-image: url(/assets/images/icons/ico-25.png);
+    &.__cart {background-position: 0 0;}
+  }
 }
