@@ -20,6 +20,7 @@
             .grid-i.__grid-3>
               %aside#sidebar.sidebar
                 = Haml::Engine.new(File.read('views/common/_catalog_nav.haml')).render
+                = Haml::Engine.new(File.read('views/common/_catalog_filter_brand.haml')).render
 
             .grid-i.__grid-9>
               %section#section.section{role: "region", "aria-label" => ""}
