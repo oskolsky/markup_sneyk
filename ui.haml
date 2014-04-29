@@ -1,0 +1,48 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title UI / Sneyk
+    = Haml::Engine.new(File.read("views/layouts/_head.haml")).render
+  
+  %body#page.page.__default
+    = Haml::Engine.new(File.read("views/common/_alerts.haml")).render
+    
+    %main#main.main{role: "main"}
+
+      %section#section.section{role: "region", "aria-label" => "UI"}
+        .ctn
+          .p-t_4.p-b_4
+            .section_inner.__padding
+
+              .grid
+
+                .grid-i.__grid-4>
+
+                  .m-b_4
+                    %h2.m-b_2 Forms
+                    %form.form
+                      
+                      %div.m-b_2
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Имя"}
+                      
+                      %div.m-b_2
+                        .form-el.__select.__block.__fake
+                          %p &nbsp;
+                          %select.form-el.__select.__real
+                            %option{selected: "selected"} Россия
+                            %option Украина
+                            %option Мордор
+
+                      %div.m-b_2
+                        %textarea.form-el.__textarea.__block{rows: 5}
+
+                      %div.m-b_2
+                        %label.form-el.__label
+                          %span.form-el.__checkbox.__fake.__top
+                            %input.form-el.__checkbox.__real{type: "checkbox"}
+                          %span Получать информацию о акциях и новинках
+
+                      %div.m-b_2
+                        %button.form-el.__btn Сохранить
+
+                .grid-i.__grid-4>

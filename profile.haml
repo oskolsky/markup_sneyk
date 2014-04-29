@@ -10,9 +10,19 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      %section.section{role: "region", "aria-label" => ""}
+
+      %section.section{role: "region", "aria-label" => "Profile"}
         .ctn
-                  
+          .p-t_5
+            %h3.m-b_1 Личный кабинет
+            .section_inner
+              .grid.__no-gutter
+                .grid-i.__grid-5>
+                  %form.form
+                    %h1.section_t Ваши данные                  
+                .grid-i.__grid-4>
+                .grid-i.__grid-3>
+
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
