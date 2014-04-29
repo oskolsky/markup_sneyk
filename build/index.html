@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+  <head>
+    <title>Sneyk</title>
+    <meta charset='utf-8'>
+    <meta content='width=device-width' name='viewport'>
+    <meta content='telephone=no' name='format-detection'>
+    <meta content='' name='description'>
+    <meta content='' name='keywords'>
+    <link href='/humans.txt' rel='author'>
+    <link href='/favicon.ico' rel='icon'>
+    <link href='/apple-touch-icon-precomposed.png' rel='apple-touch-icon'>
+    <link href='/apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon' sizes='57x57'>
+    <link href='/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='/apple-touch-icon-144x144-precomposed.png' rel='apple-touch-icon' sizes='144x144'>
+    <link href='/assets/stylesheets/application.css' rel='stylesheet'>
+    <!-- build:javascripts -->
+    <script src='/assets/javascripts/vendor/modernizr-latest.js'></script>
+    <script src='/assets/javascripts/vendor/yepnope.js'></script>
+    <script src='/assets/javascripts/vendor/jquery-2.1.0.js'></script>
+    <script src='/assets/javascripts/vendor/jquery-ui-1.10.4.js'></script>
+    <script src='/assets/javascripts/vendor/underscore.js'></script>
+    <script src='/assets/javascripts/vendor/backbone.js'></script>
+    <script src='/assets/javascripts/vendor/smartresize.js'></script>
+    <script src='/assets/javascripts/vendor/doublehover.js'></script>
+    <script src='/assets/javascripts/vendor/jquery.arcticmodal.js'></script>
+    <script src='/assets/javascripts/vendor/owl.carousel.js'></script>
+    <script src='/assets/javascripts/vendor/imagesloaded.pkgd.js'></script>
+    <script src='/assets/javascripts/vendor/masonry.pkgd.js'></script>
+    <script src='/assets/javascripts/vendor/accounting.js'></script>
+    <script src='/assets/javascripts/polyfill/polyfill.js'></script>
+    <script src='/assets/javascripts/config.js'></script>
+    <script src='/assets/javascripts/jquery.extensions.js'></script>
+    <script src='/assets/javascripts/forms.js'></script>
+    <script src='/assets/javascripts/components.js'></script>
+    <script src='/assets/javascripts/application.js'></script>
+    <script src='/assets/javascripts/project.js'></script>
+    <!-- endbuild -->
+  </head>
+  <body class="page" id="page">
+    <style>
+      .alert-no-js {display: none;}
+      .no-js .alert-no-js {display: block;}
+    </style>
+    <div class='alert-no-js c-alert __l c-bg __red' role='alert'>
+      <h1>У вас отключен JavaScript.</h1>
+    </div>
+    <!--[if lt IE 9]>
+      <div role='alert' style='padding: 30px; background-color: #2980b9; text-align: center;'>
+        <h1 style='color: #fff; font-size: 40px; line-height: 1.5;'>
+          Использование устаревшего браузера
+          <br>
+          повышает риск взлома вашего компьютера.
+          <br>
+          <a href='http://browsehappy.com/' style='color: #fff; text-decoration: underline;' target='_blank'>Обновите свой браузер!</a>
+        </h1>
+      </div>
+    <![endif]-->
+    <header class='header' id='header' role='banner'>
+      <div class='ctn'>
+        <div class='header_bar'>
+          <div class='grid'><div class='grid-i __grid-3'>
+              <div class='cf'>
+                <div class='header_phone'>
+                  8 800
+                  <b>987-65-43</b>
+                </div>
+                <ul class='header_social'><li class='header_social_i'>
+                    <a class='header_social_i_a' href='#'>
+                      <i class='fa fa-vk'></i>
+                    </a>
+                  </li><li class='header_social_i'>
+                    <a class='header_social_i_a' href='#'>
+                      <i class='fa fa-facebook'></i>
+                    </a>
+                  </li><li class='header_social_i'>
+                    <a class='header_social_i_a' href='#'>
+                      <i class='fa fa-twitter'></i>
+                    </a>
+                  </li></ul>
+              </div>
+            </div><div class='grid-i __grid-6'>
+              <nav>
+                <ul class='header_menu __left'><li class='header_menu_i'>
+                    <a class='header_menu_i_a' href='/content.html'>О магазине</a>
+                  </li><li class='header_menu_i'>
+                    <a class='header_menu_i_a' href='/content.html'>Гарантия</a>
+                  </li><li class='header_menu_i'>
+                    <a class='header_menu_i_a' href='/content.html'>Доставка и оплата</a>
+                  </li><li class='header_menu_i'>
+                    <a class='header_menu_i_a' href='/content.html'>Вопросы и ответы</a>
+                  </li><li class='header_menu_i'>
+                    <a class='header_menu_i_a' href='/content.html'>Контакты</a>
+                  </li></ul>
+              </nav>
+            </div><div class='grid-i __grid-3'>
+              <nav>
+                <ul class='header_menu __right'><li class='header_menu_i'>
+                    <a class='header_menu_i_a' href='/content.html'><i class='fa fa-play-circle-o'></i>Личный кабинет
+                    </a>
+                  </li><li class='header_menu_i'>
+                    <a class='header_menu_i_a' href='/content.html'>Регистрация</a>
+                  </li></ul>
+              </nav>
+            </div></div>
+        </div>
+        <div class='p-t_3 p-b_3'>
+          <div class='grid'><div class='grid-i __grid-3 va-m'>
+              <a href='/'>
+                <img alt='the Sneyk' class='va-t' height='36' src='/assets/images/logo.png' width='182'>
+              </a>
+            </div><div class='grid-i __grid-6 va-m'>
+              <form class='search'>
+                <i class='fa fa-search search_ico'></i>
+                <input class='search_tx' placeholder='Поиск товаров' type='text'>
+              </form>
+            </div><div class='grid-i __grid-3 va-m'>
+              <p class='header_basket'><i class='ico __25 __cart va-m'></i><a href='/basket.html'>
+                  <b>
+                    6 товаров
+                  </b>
+                  на
+                  <b>
+                    <span class='format-money __rub'>24500</span>
+                  </b>
+                </a>
+              </p>
+            </div></div>
+        </div>
+      </div>
+    </header>
+    <nav class='nav' id='nav' role='navigation'>
+      <div class='ctn'>
+        <div class='grid'><div class='grid-i __grid-9'>
+            <ul class='menu __left'><li class='menu_i'>
+                <a class='menu_i_a __current' href='/catalog.html'>Спортивное питание</a>
+              </li><li class='menu_i'>
+                <a class='menu_i_a' href='/catalog.html'>Мужчинам</a>
+              </li><li class='menu_i'>
+                <a class='menu_i_a' href='/catalog.html'>Женщинам</a>
+              </li><li class='menu_i'>
+                <a class='menu_i_a' href='/catalog.html'>Активный отдых</a>
+              </li><li class='menu_i'>
+                <a class='menu_i_a' href='/catalog.html'>Аксессуары</a>
+              </li></ul>
+          </div><div class='grid-i __grid-3'>
+            <ul class='menu __right'><li class='menu_i'>
+                <a class='menu_i_a __sale' href='/catalog.html'>Распродажа</a>
+              </li><li class='menu_i'>
+                <a class='menu_i_a __novelty' href='/catalog.html'>Новинки</a>
+              </li></ul>
+          </div></div>
+      </div>
+    </nav>
+    <main class="main" id="main" role="main">
+      <section aria-label="" class="section" role="region">
+        <div class="ctn"></div>
+      </section>
+      <section aria-label='Recently viewed' class='section' role='region'>
+        <div class='ctn'>
+          <div class='p-t_6 p-b_6'>
+            <div class='m-b_1'>
+              <div class='grid'><div class='grid-i __grid-11 va-m'>
+                  <h3>Вы недавно смотрели:</h3>
+                </div><div class='grid-i __grid-1 va-m'>
+                  <div class='carousel-nav'><div class='carousel-nav_i __prev'></div><div class='carousel-nav_i __next'></div></div>
+                </div></div>
+            </div>
+            <div class='section_inner'>
+              <div class='p-t_3 p-b_3'>
+                <div class='products'>
+                  <div class='carousel' data-items='4'>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-3.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          89821
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-1.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          92116
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-2.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          86388
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-2.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          35643
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-1.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          68937
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-3.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          74801
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-3.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          86624
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-2.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          53555
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-4.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          33113
+                        </p>
+                      </footer>
+                    </article>
+                    <article class='product'>
+                      <header class='product_h'>
+                        <a href='/catalog_show.html'>
+                          <img alt='Ghost Tree Down Jacket' class='va-t' hjeight='126' src='/assets/images/fake/product-2.jpg' width='126'>
+                        </a>
+                        <div class='product_labels'>
+                          <div class='product_label __sale'>
+                            <span>Распродажа</span>
+                          </div>
+                          <div class='product_label __novelty'>
+                            <span>Новинка</span>
+                          </div>
+                        </div>
+                        <ul class='product_colors'><li class='product_colors_i' style='background-color: #662126;'></li><li class='product_colors_i' style='background-color: #23283b;'></li><li class='product_colors_i' style='background-color: #e6441d;'></li></ul>
+                      </header>
+                      <p class='tx __s __upper __700'>
+                        <a class='tx __voice' href='/catalog_brand.html'>Quiksilver</a>
+                      </p>
+                      <h3>
+                        <a href='/catalog_show.html'>Ghost Tree Down Jacket</a>
+                      </h3>
+                      <footer class='product_f'>
+                        <p class='format-money __rub'>
+                          89620
+                        </p>
+                      </footer>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section aria-label='Brand collection' class='section' role='region'>
+        <div class='ctn'>
+          <div class='p-r'>
+            <div class='carousel-nav __edge'><div class='carousel-nav_i __prev'></div><div class='carousel-nav_i __next'></div></div>
+            <div class='carousel' data-items='6'>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-4.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-4.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-4.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-5.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-6.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-4.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-4.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-2.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-3.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-6.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-6.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-6.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-5.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-5.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-2.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-2.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-2.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-4.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-4.jpg' width='163'>
+              </a>
+              <a href='/catalog_brand.html'>
+                <img alt='' class='va-t c-bg __light' height='60' src='/assets/images/brand/brand-6.jpg' width='163'>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class='footer' id='footer' role='contentinfo'>
+      <div class='footer_banners'>
+        <div class='ctn'>
+          <div class='grid'><div class='grid-i __grid-4'>
+              <a href='/content.html'>
+                <img alt='' class='va-t' src='/assets/images/banner-1.png' width='100%'>
+              </a>
+            </div><div class='grid-i __grid-4'>
+              <a href='/content.html'>
+                <img alt='' class='va-t' src='/assets/images/banner-2.png' width='100%'>
+              </a>
+            </div><div class='grid-i __grid-4'>
+              <a href='/content.html'>
+                <img alt='' class='va-t' src='/assets/images/banner-3.png' width='100%'>
+              </a>
+            </div></div>
+        </div>
+      </div>
+      <div class='footer_navs'>
+        <div class='ctn'>
+          <!-- back in 1990 =) -->
+          <table>
+            <tr>
+              <td>
+                <h3 class='footer_navs_t'>
+                  <a href='/catalog.html'>Cпортивное питаниe</a>
+                </h3>
+                <ul>
+                  <li>
+                    <a href='/catalog.html'>Активаторы роста</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Активное долголетие</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Аминокислоты</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Бустеры тестостерона</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Витамины и минералы</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Гейнеры</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Готовые комплексы</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Для суставов и связок</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Креатин</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>После тренировки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Протеиновые батончики</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Протеины</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <h3 class='footer_navs_t'>
+                  <a href='/catalog.html'>Мужчинам</a>
+                </h3>
+                <ul>
+                  <li>
+                    <a href='/catalog.html'>Джемперы и свитеры</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Брюки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Футболки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Спортивные костюмы</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Рубашки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Поло</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Майки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Шорты</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Плавки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Куртки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Жилеты</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Термобельё</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Головные уборы</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <h3 class='footer_navs_t'>
+                  <a href='/catalog.html'>Женищинам</a>
+                </h3>
+                <ul>
+                  <li>
+                    <a href='/catalog.html'>Джемперы и свитеры</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Брюки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Футболки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Спортивные костюмы</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Поло</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Майки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Шорты</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Плавки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Куртки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Жилеты</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Термобельё</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Головные уборы</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <h3 class='footer_navs_t'>
+                  <a href='/catalog.html'>Активный отдых</a>
+                </h3>
+                <ul>
+                  <li>
+                    <a href='/catalog.html'>Туристическое  снаряжение</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Одежда для активного отдыха</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Обувь для активного отдыха</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Отдых на природе</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Отдых на воде</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Игры для активного отдыха</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Подводное плавание</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Велоспорт</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Ледовые коньки и хоккей</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Беговые лыжи</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Горные лыжи</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Сноубординг</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Санки и снегокаты</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Экшн-камеры 20</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <h3 class='footer_navs_t'>
+                  <a href='/catalog.html'>Аксессуары</a>
+                </h3>
+                <ul>
+                  <li>
+                    <a href='/catalog.html'>Активаторы роста</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Активное долголетие</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Аминокислоты</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Бустеры тестостерона</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Витамины и минералы</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Гейнеры</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Готовые комплексы</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Для суставов и связок</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Креатин</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>После тренировки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Протеиновые батончики</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Протеины</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Снижение веса</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Спортивные напитки</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Энергетики</a>
+                  </li>
+                  <li>
+                    <a href='/catalog.html'>Заменители пищи</a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class='footer_summary'>
+        <div class='ctn'>
+          <table>
+            <tr>
+              <td>
+                <a href='/'>
+                  <img alt='the Sneyk' class='va-t' height='36' src='/assets/images/logo.png' width='182'>
+                </a>
+              </td>
+              <td>
+                <p class='tx __upper'>Магазин спортивных товаров</p>
+                <p class='tx __upper'>2014&nbsp;&copy; все права защищены</p>
+              </td>
+              <td>
+                <p class='tx __upper'>
+                  <a href='/content.html'>О магазине</a>
+                </p>
+                <p class='tx __upper'>
+                  <a href='/content.html'>Гарантия</a>
+                </p>
+              </td>
+              <td>
+                <p class='tx __upper'>
+                  <a href='/content.html'>Доставка и оплата</a>
+                </p>
+                <p class='tx __upper'>
+                  <a href='/content.html'>Вопросы и ответы</a>
+                </p>
+              </td>
+              <td>
+                <p class='tx __upper'>
+                  <a href='/content.html'>Контакты</a>
+                </p>
+              </td>
+              <td class='tx __right'>
+                <p class='footer_summary_phone'>
+                  8 800
+                  <b>987-65-43</b>
+                </p>
+                <p>
+                  <a href='mailto: info@thesheyk.ru'>info@thesheyk.ru</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
