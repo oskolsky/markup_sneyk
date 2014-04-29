@@ -227,6 +227,69 @@
           }
         }
 
+  //
+  // .. Filter
+  //
+  .sidebar_filter {
+    padding: 2rem 3rem 5rem 2rem;
+    background-color: #e5e5e5;
+    text-transform: uppercase;
+    font-weight: 700;    
+    @extend .tx.__l;
+    a {
+      line-height: 2.7rem;
+    }
+  }
+    .sidebar_filter_i {
+      &:not(:last-child) {margin-bottom: 3rem;}
+    }
+      .sidebar_filter_i_legend {
+        display: block;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-bottom: .2rem solid $base-color;
+        @extend h2;
+      }
+
+      //
+      // .. Filter on colors
+      //
+      .sidebar_filter_colors {
+        
+      }
+        .sidebar_filter_colors_i {
+
+        }
+          .sidebar_filter_colors_i_a {
+            span {
+              position: relative;
+              top: .3rem;
+              display: inline-block;
+              margin-right: 1.5rem;
+              width: 1.6rem;
+              height: 1.6rem;
+              border: 1px solid #fff;
+            }          
+          }      
+
+      //
+      // .. Filter on brands
+      //
+      .sidebar_filter_brands {
+        margin-left: -1rem;
+      }
+        .sidebar_filter_brands_i {
+
+        }
+          .sidebar_filter_brands_i_a {
+            display: inline-block;
+            padding: 0 1rem;
+            &.__current, &:hover {
+              background-color: $base-color;
+              color: #fff;
+            } 
+          }
+
 
 
 //****************************************************************************************************
@@ -431,6 +494,56 @@
     &.__prev {left:  3rem;}
     &.__next {right: 3rem;}
   }
+
+//
+// .. UI Slider range (price)
+//
+.price-range {
+  span {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+  i {
+    font-size: 1.4rem;
+  }
+  .form-el.__tx {
+    margin-right: 1rem;
+    padding: .5rem;
+    width: 5rem;
+    text-align: center;
+    font-size: 1.4rem;   
+  }
+}
+  
+  .ui-slider {    
+    position: relative;  
+    margin-right: .6rem;
+    margin-bottom: 2rem;
+    height: .6rem;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: -.6rem;
+      bottom: 0;
+      left: 0;
+      background-color: #aaa;
+      content: '';  
+    }
+  }
+    .ui-slider-range{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: $base-color;
+    }
+    .ui-slider-handle {
+      position: absolute;
+      top: -.5rem;
+      width: .6rem;
+      height: 1.6rem;
+      background-color: $major-color;
+    }
 
 
 

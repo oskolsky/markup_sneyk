@@ -40,6 +40,53 @@ $(function() {
 
   });
 
+  //
+  // .. UI Slider range
+  //
+  $('.price-range').each(function() {
+    
+    var _this = this;
+    
+    var 
+      $range = $(this).find('.price-range_slider'),
+      $rangeMin = $(this).find('.price-range_min'),
+      $rangeMax = $(this).find('.price-range_max');
+    
+    var
+      rangeMin = $(this).data('min'),
+      rangeMax = $(this).data('max');
+
+    $range.slider({
+      range: true,
+      min: rangeMin,
+      max: rangeMax,
+      values: [rangeMin, rangeMax],
+      slide: function( event, ui ) {
+        $rangeMin.val(ui.values[0]);
+        $rangeMax.val(ui.values[1]);
+      }
+    });
+    $rangeMin.val($range.slider('values', 0));
+    $rangeMax.val($range.slider('values', 1));
+
+    $rangeMin.on('change', function() {
+      var
+        rangeMin = $(this).val(),
+        rangeMax = $range.slider('values', 1);
+
+      $range.slider({values: [rangeMin, rangeMax]});
+    })
+
+    $rangeMax.on('change', function() {
+      var
+        rangeMin = $range.slider('values', 0),
+        rangeMax = $(this).val();
+
+      $range.slider({values: [rangeMin, rangeMax]});
+    })
+  });
+
+
   //****************************************************************************************************
   //
   // .. SCROLL
