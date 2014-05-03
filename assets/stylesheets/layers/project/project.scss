@@ -586,6 +586,43 @@
   line-height: 4rem;
 }
 
+//
+// .. Block
+//
+.block {
+  margin: -2rem -2rem;
+  padding: 2rem; 
+  &.__gray {background-color: #e5e5e5;}
+  &.__red  {
+    background-color: #ee3d3e;
+    color: #fff;
+    .title {border-color: #fff;}
+  }
+}
+
+//
+// .. Discont block
+//
+.discont-block {
+  padding-bottom: 1.4rem;
+}
+  .discont-block_value {
+    margin-bottom: 1rem;
+    font-size: 7rem;
+    line-height: 8rem;
+  }
+  .discont-block_action {
+    display: block;
+    height: 4rem;
+    border: .2rem solid #fff;
+    color: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 3.8rem;
+    @include prefixes(box-sizing, border-box);
+    &:hover {color: inherit;}
+  }
+
 
 
 //****************************************************************************************************

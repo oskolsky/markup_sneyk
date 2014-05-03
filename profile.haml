@@ -12,83 +12,94 @@
     %main#main.main{role: "main"}
       .ctn
         .p-t_5
+
           %h3.m-b_1 Личный кабинет
+          
           %section#section.section{role: "region", "aria-label" => "Profile"}
             .section_inner.__padding
               .grid.__no-gutter
                 .grid-i.__grid-5>
+                  .js-resize-to-max-height
                   
-                  %form.form
-                    
-                    %fieldset.form-el.__fieldset.__block
-                      %legend.form-el.__legend.__block.alpha Ваши данные
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Имя"}
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Фамилия"}
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "E-mail"}
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Номер телефона"}
-                    
-                    %fieldset.form-el.__fieldset.__block
-                      %legend.form-el.__legend.__block.beta Адрес доставки
-                      .form-el.__row.__block
-                        .form-el.__select.__block.__fake
-                          %p &nbsp;
-                          %select.form-el.__select.__real
-                            %option{selected: "selected"} Россия
-                            %option Украина
-                            %option Мордор
-                      .form-el.__row.__block
-                        .form-el.__select.__block.__fake
-                          %p &nbsp;
-                          %select.form-el.__select.__real
-                            %option{selected: "selected"} Нижегородская область
-                            %option Смоленская область
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Город"}
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Индекс"}
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Улица"}
-                      .form-el.__row.__block
-                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Номер телефона"}
-                      .form-el.__row.__block
-                        %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Сообщение"}
-                    
-                    %fieldset.form-el.__fieldset.__block
-                      %legend.form-el.__legend.__block.beta Акции и новинки
-                      .form-el.__row.__block.m-b_5
-                        %label.form-el.__label
-                          %span.form-el.__checkbox.__fake.__top
-                            %input.form-el.__checkbox.__real{type: "checkbox"}
-                          %span Получать информацию о акциях и новинках
-                      .form-el.__row.__block
-                        %button.form-el.__btn{type: "submit"} Сохранить
+                    %form.form
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.alpha Ваши данные
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "Имя"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "Фамилия"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "E-mail"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "Номер телефона"}
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.beta Адрес доставки
+                        .form-el.__row.__block
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected"} Россия
+                              %option Украина
+                              %option Мордор
+                        .form-el.__row.__block
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected"} Нижегородская область
+                              %option Смоленская область
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "Город"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "Индекс"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "Улица"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__default.__block{type: "text", placeholder: "Номер телефона"}
+                        .form-el.__row.__block
+                          %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Сообщение"}
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.beta Акции и новинки
+                        .form-el.__row.__block.m-b_5
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake.__top
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span Получать информацию о акциях и новинках
+                        .form-el.__row.__block
+                          %button.form-el.__btn{type: "submit"} Сохранить
 
                 .grid-i.__grid-4>
-                  %h2.section_t Ваши заказы
-                  - 1.upto(5) do
-                    .order-item
-                      .cf.m-b_1
-                        .f-l
-                          %p.tx.__voice #0013723
-                        .f-r
-                          %p.tx.__voice 24 апреля 2014 
-                      %ul.m-b_1
-                        - 1.upto(3) do
-                          %li.tx.__xl.__upper
-                            %span.tx.__700 Driver Seat Jacket
-                            %span XL / синий
-                      %p.tx.__xl.__upper.__700
-                        %span.format-money.__rub 24900
+                  .block.__gray.js-resize-to-max-height
+
+                    %h2.title Ваши заказы
+                    - 1.upto(3) do
+                      .order-item
+                        .cf.m-b_1
+                          .f-l
+                            %p.tx.__voice #0013723
+                          .f-r
+                            %p.tx.__voice 24 апреля 2014 
+                        %ul.m-b_1
+                          - 1.upto(3) do
+                            %li.tx.__xl.__upper
+                              %a.tx.__700{href: "/catalog_show.html"} Driver Seat Jacket
+                              %span XL / синий
+                        %p.tx.__xl.__upper.__700
+                          %span.format-money.__rub 24900
 
                 .grid-i.__grid-3>
-                  %h3.section_t Рекомендации для вас
-                  - 1.upto(3) do
-                    .m-b_2
-                      = Haml::Engine.new(File.read('views/common/_product.haml')).render
+                  .js-resize-to-max-height
+
+                    .block.__red.m-b_2
+                      %h4.title Ваша скидка
+                      .discont-block
+                        %p.discont-block_value 12%
+                        %a.discont-block_action{href: "#"} Как получить скидку?
+
+                  
+                    %h4.title.m-b_4 Рекомендации для вас
+                    - 1.upto(3) do
+                      .m-b_2
+                        = Haml::Engine.new(File.read('views/common/_product.haml')).render
 
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render

@@ -122,8 +122,8 @@ $(window).load(function() {
   });
 
   //
-  // ..Set height sidebar & section
+  // .. Resize to max height
   //
-  $('.page.__content #sidebar, .page.__content #section').resizeToMaxHeight();
+  $('.js-resize-to-max-height').resizeToMaxHeight();
 
 });
