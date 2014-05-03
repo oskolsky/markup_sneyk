@@ -10,18 +10,68 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-
-      %section.section{role: "region", "aria-label" => "Profile"}
-        .ctn
-          .p-t_5
-            %h3.m-b_1 Личный кабинет
-            .section_inner
+      .ctn
+        .p-t_5
+          %h3.m-b_1 Личный кабинет
+          %section#section.section{role: "region", "aria-label" => "Profile"}
+            .section_inner.__padding
               .grid.__no-gutter
                 .grid-i.__grid-5>
+                  
                   %form.form
-                    %h1.section_t Ваши данные                  
+                    
+                    %fieldset.form-el.__fieldset.__block
+                      %legend.form-el.__legend.__block.alpha Ваши данные
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Имя"}
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Фамилия"}
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "E-mail"}
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Номер телефона"}
+                    
+                    %fieldset.form-el.__fieldset.__block
+                      %legend.form-el.__legend.__block.beta Адрес доставки
+                      .form-el.__row.__block
+                        .form-el.__select.__block.__fake
+                          %p &nbsp;
+                          %select.form-el.__select.__real
+                            %option{selected: "selected"} Россия
+                            %option Украина
+                            %option Мордор
+                      .form-el.__row.__block
+                        .form-el.__select.__block.__fake
+                          %p &nbsp;
+                          %select.form-el.__select.__real
+                            %option{selected: "selected"} Нижегородская область
+                            %option Смоленская область
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Город"}
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Индекс"}
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Улица"}
+                      .form-el.__row.__block
+                        %input.form-el.__tx.__default.__block{type: "text", placeholder: "Номер телефона"}
+                      .form-el.__row.__block
+                        %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Сообщение"}
+                    
+                    %fieldset.form-el.__fieldset.__block
+                      %legend.form-el.__legend.__block.beta Акции и новинки
+                      .form-el.__row.__block.m-b_5
+                        %label.form-el.__label
+                          %span.form-el.__checkbox.__fake.__top
+                            %input.form-el.__checkbox.__real{type: "checkbox"}
+                          %span Получать информацию о акциях и новинках
+                      .form-el.__row.__block
+                        %button.form-el.__btn{type: "submit"} Сохранить
+
                 .grid-i.__grid-4>
+                  %h2.section_t Ваши заказы
+
                 .grid-i.__grid-3>
+                  %h3.section_t Ваши скидка
 
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render

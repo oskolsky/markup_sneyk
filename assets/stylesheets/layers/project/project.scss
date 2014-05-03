@@ -169,13 +169,21 @@
       padding: 2rem 3rem 4rem;
       .grid {
         margin-right: -3rem;
-        margin-left: -3rem;
+        margin-left: -4.8rem;
+        &.__no-gutter {
+          margin-right: -3rem;
+          margin-left: -3rem;
+        }
+        > .grid-i {
+          padding: 0 2rem;
+        }
       }
     }
   }
     .section_t {
       margin-bottom: 2rem;
       border-bottom: .2rem solid $base-color;
+      line-height: 5rem;
     }
 
 
@@ -203,6 +211,7 @@
     .sidebar_nav_t {
       margin-bottom: 2rem;
       border-bottom: .2rem solid #fff;
+      line-height: 5rem;
     }
     .sidebar_menu {
 

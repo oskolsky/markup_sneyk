@@ -37,6 +37,27 @@ input {
   }
 
   //
+  // .. Fieldset
+  //
+  &.__fieldset {
+    &:not(:last-child) {margin-bottom: 3.5rem;} 
+  }
+
+  //
+  // .. Legend
+  //
+  &.__legend {
+    @extend .section_t;
+  }
+
+  //
+  // .. Row
+  //
+  &.__row {
+    &:not(:last-child) {margin-bottom: 1.5rem;}
+  }
+
+  //
   // .. Label
   //
   &.__label {
@@ -55,11 +76,6 @@ input {
     }
   }
 
-  //
-  // .. Legend
-  //
-  &.__legend {@extend .delta;}
-  
   //
   // .. Text
   //
