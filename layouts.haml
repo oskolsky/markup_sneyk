@@ -12,8 +12,24 @@
     %main#main.main{role: "main"}
       .ctn
         .p-t_5
-          
-          %section.section{role: "region", "aria-label" => "Layouts"}
+
+          .grid
+            .grid-i.__grid-6>
+              .m-b_4
+                %h1 Заголовок h1
+              .m-b_4
+                %h2 Заголовок h2
+              .m-b_4
+                %h3 Заголовок h3
+            .grid-i.__grid-6>
+              .m-b_4
+                %h1.title Заголовок h1
+              .m-b_4
+                %h2.title Заголовок h2
+              .m-b_4
+                %h3.title Заголовок h3
+
+          %section.section.m-b_4{role: "region", "aria-label" => "Layouts"}
             .section_inner
               .grid
                 - 1.upto(6) do |i|
@@ -22,7 +38,7 @@
                   .grid-i.__grid-1.c-bg.__green>
                     %p.tx.__center 1
                   
-          %section.section{role: "region", "aria-label" => "Layouts"}
+          %section.section.m-b_4{role: "region", "aria-label" => "Layouts"}
             .section_inner.__padding
               .grid
                 - 1.upto(6) do

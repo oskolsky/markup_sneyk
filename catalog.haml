@@ -12,26 +12,29 @@
     %main#main.main{role: "main"}
       .ctn
         .p-t_5
+
           %p.gamma.m-b_1
             %a{href: "#"} Мужчинам
             = "/"
             %a{href: "#"} Одежда
             = "/"
             Теплые куртки
+          
           .grid.__no-gutter
-            .grid-i.__grid-3>
+            .grid-i.__grid-3.c-bg.__red>
               %aside#sidebar.sidebar
                 = Haml::Engine.new(File.read('views/common/_catalog_nav.haml')).render
                 = Haml::Engine.new(File.read('views/common/_catalog_filter.haml')).render
-            .grid-i.__grid-9>
-              %section#section.section{role: "region", "aria-label" => "Catalog"}
-                .section_inner.__padding
-                  %h1.section_t Теплые Куртки
-                  %article.cnt
-                    %p Повседневная практика показывает, что консультация с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что рамки и&nbsp;место обучения кадров в&nbsp;значительной степени обуславливает создание новых предложений. Не&nbsp;следует, однако забывать, что новая модель организационной деятельности требуют определения и&nbsp;уточнения позиций, занимаемых участниками в&nbsp;отношении поставленных задач.
-                    %p Не&nbsp;следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и&nbsp;реализации модели развития. Задача организации, в&nbsp;особенности&nbsp;же новая модель организационной деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям.
-                  = Haml::Engine.new(File.read('views/common/_catalog_products.haml')).render
-                = Haml::Engine.new(File.read('views/common/_catalog_pagination.haml')).render
+            .grid-i.__grid-9.c-bg.__red>
+              2
+              / %section#section.section{role: "region", "aria-label" => "Catalog"}
+              /   .section_inner.__padding
+              /     %h1.section_t Теплые Куртки
+              /     %article.cnt
+              /       %p Повседневная практика показывает, что консультация с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что рамки и&nbsp;место обучения кадров в&nbsp;значительной степени обуславливает создание новых предложений. Не&nbsp;следует, однако забывать, что новая модель организационной деятельности требуют определения и&nbsp;уточнения позиций, занимаемых участниками в&nbsp;отношении поставленных задач.
+              /       %p Не&nbsp;следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и&nbsp;реализации модели развития. Задача организации, в&nbsp;особенности&nbsp;же новая модель организационной деятельности позволяет выполнять важные задания по&nbsp;разработке системы обучения кадров, соответствует насущным потребностям.
+              /     = Haml::Engine.new(File.read('views/common/_catalog_products.haml')).render
+              /   = Haml::Engine.new(File.read('views/common/_catalog_pagination.haml')).render
 
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render

@@ -160,7 +160,7 @@
 //
 //****************************************************************************************************
 .section {
-  &:not(:last-child) {margin-bottom: 5rem;}
+  
 }
   .section_inner {
     overflow: hidden;
@@ -190,11 +190,6 @@
       }
     }
   }
-    .section_t {
-      margin-bottom: 2rem;
-      border-bottom: .2rem solid $base-color;
-      line-height: 5rem;
-    }
 
 
 
@@ -218,9 +213,8 @@
     @include prefixes(box-sizing, border-box);
   }
     .sidebar_nav_t {
-      margin-bottom: 2rem;
-      border-bottom: .2rem solid #fff;
-      line-height: 5rem;
+      border-color: #fff !important;
+      @extend .title;
     }
     .sidebar_menu {
 
@@ -265,10 +259,9 @@
     }
       .sidebar_filter_i_legend {
         display: block;
-        margin-bottom: 2rem;
         width: 100%;
-        border-bottom: .2rem solid $base-color;
         @extend h2;
+        @extend .title;
       }
 
       //
@@ -583,6 +576,15 @@
       }
     }
   }
+}
+
+//
+// .. Title
+//
+.title {
+  margin-bottom: 2rem;
+  border-bottom: .2rem solid $base-color;
+  line-height: 4rem;
 }
 
 
