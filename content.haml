@@ -20,7 +20,7 @@
         
           .grid.__no-gutter
             .grid-i.__grid-3>
-              %aside#sidebar.sidebar
+              %aside#sidebar.sidebar.js-resize-to-max-height
                 %nav.sidebar_nav
                   %h1.sidebar_nav_t Информация
                   %ul.sidebar_menu
@@ -35,7 +35,7 @@
                     %li.sidebar_menu_i
                       %a.sidebar_menu_i_a{href: "/content.html"} Контакты
             .grid-i.__grid-9>
-              %section#section.section{role: "region", "aria-label" => "Content"}
+              %section#section.section.js-resize-to-max-height{role: "region", "aria-label" => "Content"}
                 .section_inner.__padding
                   %h1.title Доставка и оплата
                   %article.cnt
