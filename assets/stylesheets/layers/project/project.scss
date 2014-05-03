@@ -167,7 +167,7 @@
     box-shadow: 0 .1rem .1rem .1rem rgba(0, 0, 0, .1);
     &.__padding {
       padding: 2rem 3rem 4rem;
-      .grid {
+      > .grid {
         margin-right: -3rem;
         margin-left: -4.8rem;
         &.__no-gutter {
@@ -194,7 +194,6 @@
 //
 //****************************************************************************************************
 .sidebar {
-  
   
 }
 
@@ -557,6 +556,24 @@
       height: 1.6rem;
       background-color: $major-color;
     }
+
+//
+// .. Order item
+//
+.order-item {
+  padding-bottom: 1rem;
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #727272;
+  }
+  ul {
+    li {
+      span {
+        &:not(:last-child) {margin-right: .5rem;}
+      }
+    }
+  }
+}
 
 
 

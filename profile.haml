@@ -69,9 +69,26 @@
 
                 .grid-i.__grid-4>
                   %h2.section_t Ваши заказы
+                  - 1.upto(5) do
+                    .order-item
+                      .cf.m-b_1
+                        .f-l
+                          %p.tx.__voice #0013723
+                        .f-r
+                          %p.tx.__voice 24 апреля 2014 
+                      %ul.m-b_1
+                        - 1.upto(3) do
+                          %li.tx.__xl.__upper
+                            %span.tx.__700 Driver Seat Jacket
+                            %span XL / синий
+                      %p.tx.__xl.__upper.__700
+                        %span.format-money.__rub 24900
 
                 .grid-i.__grid-3>
-                  %h3.section_t Ваши скидка
+                  %h3.section_t Рекомендации для вас
+                  - 1.upto(3) do
+                    .m-b_2
+                      = Haml::Engine.new(File.read('views/common/_product.haml')).render
 
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render
