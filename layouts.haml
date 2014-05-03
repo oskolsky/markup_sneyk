@@ -1,0 +1,45 @@
+!!!
+%html.no-js{lang: "ru-RU"}
+  %head
+    %title Layouts / Sneyk
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
+    
+    %main#main.main{role: "main"}
+      .ctn
+        .p-t_5
+          
+          %section.section{role: "region", "aria-label" => "Layouts"}
+            .section_inner
+              .grid
+                - 1.upto(6) do |i|
+                  .grid-i.__grid-1.c-bg.__red>
+                    %p.tx.__center 1
+                  .grid-i.__grid-1.c-bg.__green>
+                    %p.tx.__center 1
+                  
+          %section.section{role: "region", "aria-label" => "Layouts"}
+            .section_inner.__padding
+              .grid
+                - 1.upto(6) do
+                  .grid-i.__grid-1.c-bg.__red>
+                    %p.tx.__center 1
+                  .grid-i.__grid-1.c-bg.__green>
+                    %p.tx.__center 1
+
+          %section.section{role: "region", "aria-label" => "Layouts"}
+            .section_inner.__padding
+              .grid.__no-gutter
+                - 1.upto(6) do
+                  .grid-i.__grid-1.c-bg.__red>
+                    %p.tx.__center 1
+                  .grid-i.__grid-1.c-bg.__green>
+                    %p.tx.__center 1
+
+      = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
+      = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
