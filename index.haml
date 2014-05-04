@@ -10,9 +10,157 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      %section.section{role: "region", "aria-label" => ""}
+
+      %section.section{role: "region", "aria-label" => "Promo carousel"}
+        .p-r
+          .carousel-nav.__large.__promo
+            .carousel-nav_i.__prev>
+            .carousel-nav_i.__next>
+          .carousel{data: {items: 1, transition: "fadeUp"}}
+            - 1.upto(4) do
+              %div{style: "background-color: #c1cac7;"}
+                .ctn
+                  %a{href: "#"}
+                    %img.va-t{src: "/assets/images/fake/slider-1.jpg", width: 978, height: 500, alt: ""}
+
+      .banners.__top
         .ctn
-                  
-      = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
+          .grid
+            .grid-i.__grid-4>
+              %a{href: "/content.html"}
+                %img.va-t{src: "/assets/images/banner-1.png", width: "100%", alt: ""}
+            .grid-i.__grid-4>
+              %a{href: "/content.html"}
+                %img.va-t{src: "/assets/images/banner-2.png", width: "100%", alt: ""}
+            .grid-i.__grid-4>
+              %a{href: "/content.html"}
+                %img.va-t{src: "/assets/images/banner-3.png", width: "100%", alt: ""}
+
+      .ctn
+        .p-t_5.p-b_6
+
+          .tabs
+            %ul.m-b_1
+              %li
+                %a{href: "#tabs-1"} Хиты продаж
+              %li
+                %a{href: "#tabs-2"} Распродажа
+              %li
+                %a{href: "#tabs-3"} Новинки
+            #tabs-1
+              %section.section{role: "region", "aria-label" => "Popular products"}
+                .section_inner.p-t_3.p-b_3
+                  .products
+                    .grid.__no-gutter
+                      - 1.upto(4) do
+                        .grid-i.__grid-3>
+                          = Haml::Engine.new(File.read('views/common/_product.haml')).render
+            #tabs-2
+              %section.section{role: "region", "aria-label" => "Popular products"}
+                .section_inner.p-t_3.p-b_3
+                  .products
+                    .grid.__no-gutter
+                      - 1.upto(4) do
+                        .grid-i.__grid-3>
+                          = Haml::Engine.new(File.read('views/common/_product.haml')).render
+            #tabs-3
+              %section.section{role: "region", "aria-label" => "Popular products"}
+                .section_inner.p-t_3.p-b_3
+                  .products
+                    .grid.__no-gutter
+                      - 1.upto(4) do
+                        .grid-i.__grid-3>
+                          = Haml::Engine.new(File.read('views/common/_product.haml')).render
+
+          %section.section.m-b_5{role: "region", "aria-label" => "Popular products"}
+            .action-block
+              .grid
+                .grid-i.__grid-9.va-m>
+                  %p.beta
+                    %span.tx.__400 Зарегистрируйтесь на нашем фитнес портале и 
+                    получите скидку в 10%
+                .grid-i.__grid-3.va-m>
+                  %button.form-el.__btn.__small.__major.__block Зарегитрироваться
+            .section_inner.p-t_3.p-b_3
+              .products
+                .grid.__no-gutter
+                  - 1.upto(4) do
+                    .grid-i.__grid-3>
+                      = Haml::Engine.new(File.read('views/common/_product.haml')).render
+              .products
+                .grid.__no-gutter
+                  - 1.upto(3) do
+                    .grid-i.__grid-3>
+                      = Haml::Engine.new(File.read('views/common/_product.haml')).render
+                  .grid-i.__grid-3>
+                    .product_banner
+                      %a{href: "#"}
+                        %img{src: "/assets/images/banner-4.png", width: "100%", alt: ""}
+
+          .grid.__no-gutter.m-b_5
+            .grid-i.__grid-3>
+              %aside.sidebar.js-resize-to-max-height
+                %nav.sidebar_nav
+                  %h2.sidebar_nav_t О магазине
+                  %ul.sidebar_menu.m-b_3
+                    %li.sidebar_menu_i
+                      %a.sidebar_menu_i_a.tx.__upper{href: "/content.html"} Гарантия
+                    %li.sidebar_menu_i
+                      %a.sidebar_menu_i_a.tx.__upper{href: "/content.html"} Доставка и оплата
+                    %li.sidebar_menu_i
+                      %a.sidebar_menu_i_a.tx.__upper{href: "/content.html"} Вопросы и ответы
+                    %li.sidebar_menu_i
+                      %a.sidebar_menu_i_a.tx.__upper{href: "/content.html"} Контакты
+                  %ul.sidebar_nav_social
+                    %li.sidebar_nav_social_i>
+                      %a.sidebar_nav_social_i_a{href: "#"}
+                        %i.fa.fa-vk
+                    %li.sidebar_nav_social_i>
+                      %a.sidebar_nav_social_i_a{href: "#"}
+                        %i.fa.fa-facebook
+                    %li.sidebar_nav_social_i>
+                      %a.sidebar_nav_social_i_a{href: "#"}
+                        %i.fa.fa-twitter
+            .grid-i.__grid-9>
+              %section.section{role: "region", "aria-label" => "Content"}
+                .section_inner.__padding.js-resize-to-max-height
+                  %article.cnt
+                    %p Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я&nbsp;наслаждаюсь от&nbsp;всего сердца. Я&nbsp;совсем один и&nbsp;блаженствую в&nbsp;здешнем краю, словно созданном для таких, как&nbsp;я. 
+                    %p Я&nbsp;так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от&nbsp;этого. Ни&nbsp;одного штриха не&nbsp;мог&nbsp;бы я&nbsp;сделать, а&nbsp;никогда не&nbsp;был таким большим художником, как в&nbsp;эти минуты.
+                    %p Когда от&nbsp;милой моей долины поднимается пар и&nbsp;полдневное солнце стоит над непроницаемой чащей темного леса и&nbsp;лишь редкий луч проскальзывает в&nbsp;его святая святых, а&nbsp;я&nbsp;лежу в&nbsp;высокой траве у&nbsp;быстрого ручья&nbsp;и, прильнув к&nbsp;земле, вижу тысячи всевозможных былинок и&nbsp;чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков.
+                    .pluso{data: {background: "none;", options: "small,square,line,horizontal,nocounter,sepcounter=1,theme=14", services: "vkontakte,odnoklassniki,facebook,twitter,google", user: "1938787731"}}
+                    :javascript
+                      (function(){if(window.pluso)if(typeof window.pluso.start=="function")return;if(window.ifpluso==undefined){window.ifpluso=1;var e=document,t=e.createElement("script"),n="getElementsByTagName";t.type="text/javascript";t.charset="UTF-8";t.async=true;t.src=("https:"==window.location.protocol?"https":"http")+"://share.pluso.ru/pluso-like.js";var r=e[n]("body")[0];r.appendChild(t)}})()
+
+          %section.section.m-b_6{role: "region", "aria-label" => "News"}
+            %h2.title.m-b_3 Новости
+            .news
+              .grid
+                - 1.upto(3) do
+                  .grid-i.__grid-4>
+                    .news_i
+                      .grid
+                        .grid-i.__grid-2>
+                          %a{href: "#"}
+                            %img.va-t.c-bg.__light{src: "/assets/images/blank.gif", width: "100%", alt: "Новогодняя распродажа весь декабрь!"}
+                        .grid-i.__grid-2>
+                          .p-t_1
+                            %p.tx.__s.__voice.__upper.__700 12 декабря
+                            %h3.news_i_t
+                              %a{href: "#"} Новогодняя распродажа весь декабрь!
+
+          %section.section{role: "region", "aria-label" => "Subscription"}
+            .action-block
+              %form.form
+                .grid.__no-gutter
+                  .grid-i.__grid-4.va-m>
+                    %p.beta
+                      Подпишитесь 
+                      %span.tx.__400 на обновления:
+                  .grid-i.__grid-5.va-m>
+                    %input.form-el.__tx.__small.__block{type: "text", placeholder: "Ваша электронная почта"}
+                  .grid-i.__grid-3.va-m>
+                    %button.form-el.__btn.__small.__major.__block Подписаться
+
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

@@ -6,6 +6,15 @@
 $(function() {
 
   //
+  // .. Tabs init
+  //
+  $('.tabs').tabs({
+    activate: function(event, ui) {
+      $(this).find('.product').resizeToMaxHeight();
+    }
+  });
+
+  //
   // .. OWL Carousel init
   //
   $('.carousel').each(function() {
@@ -19,7 +28,8 @@ $(function() {
 
     $carousel.owlCarousel({
       responsive: false,
-      items : $carousel.data('items')
+      items : $carousel.data('items'),
+      transitionStyle: $carousel.data('transition') || 'fade'
     });
 
     $prev.on('touchstart click', function() {
