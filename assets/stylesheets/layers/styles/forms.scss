@@ -225,6 +225,37 @@ input {
     }
     > p {margin-right: 2.2rem;}
   }
+
+  //
+  // .. Number
+  //
+  &.__number {
+    position: relative;
+    padding: 0 2.5rem 0 1.5rem;
+    height: 3.4rem;
+    background-color: #f1f1f1;
+    line-height: 3.4rem;
+    .number_control {
+      cursor: pointer;
+      &.__down, &.__up {
+        position: absolute;
+        right: 0;
+        width: 1.8rem;
+        height: 1.7rem;
+        color: #c1c1c1;
+        &:hover {color: $base-color;}
+      }
+      &.__up    {
+        top: 0;
+        line-height: 3rem;
+      }
+      &.__down  {
+        bottom: 0;
+        line-height: .6rem;
+      }
+      &.__count {}
+    }
+  }
     
   //
   // .. Disabled

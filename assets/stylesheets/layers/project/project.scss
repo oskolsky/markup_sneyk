@@ -492,6 +492,7 @@
   .checkout-total_value {
     margin: 1.3rem;
     font-size: 4.8rem;
+    font-family: Arial, sans-serif;
   }
 
 
@@ -794,7 +795,6 @@
     background-color: #ee3d3e;
     color: #fff;
     a {color: inherit;}
-    .hr {background-color: #fff;}
     .title {border-color: #fff;}
   }
 }
@@ -808,6 +808,7 @@
   .discont-block_value {
     margin-bottom: 1rem;
     font-size: 7rem;
+    font-family: Arial, sans-serif;
     line-height: 8rem;
   }
   .discont-block_action {
@@ -840,11 +841,27 @@
 }
 
 //
-// .. HR
+// .. Table
 //
-.hr {
-  height: .2rem;
-  background-color: $base-color;
+.table {
+  width: 100%;
+  thead {
+    border-bottom: 2px solid $base-color;
+    th {
+      padding-bottom: .8rem;
+      text-align: left;
+      @extend .delta;
+    }
+  }
+  tbody {
+    tr {      
+      &:not(:last-child) {border-bottom: 1px solid #ddd;}
+      td {
+        padding: 2rem 2rem 2rem 0;
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
 

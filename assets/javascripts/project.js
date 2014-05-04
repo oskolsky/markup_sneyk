@@ -1,5 +1,32 @@
 //****************************************************************************************************
 //
+// .. EVENTS
+//
+//****************************************************************************************************
+//
+// .. Set of count product (form element number)
+//
+$(document).on('click touchstart', '.form-el.__number .number_control', function() {
+  var 
+    $parent = $(this).closest('.form-el.__number'),
+    $input  = $parent.find('input[type="hidden"]'),
+    value   = $input.val();
+
+  $(this).hasClass('__up') ? value++ : value--;
+  
+  if (value > 0) {
+    $input.val(value);
+    $parent.find('.number_control.__count').html(value);
+    $parent.closest('.product').find('.form-el.__major.__basket span').html(value);
+  }
+
+  return false;
+});
+
+
+
+//****************************************************************************************************
+//
 // .. READY
 //
 //****************************************************************************************************
