@@ -23,6 +23,16 @@ $(document).on('click touchstart', '.form-el.__number .number_control', function
   return false;
 });
 
+//
+// .. Photo gallery
+//
+$(document).on('click touchstart', '.card-product_gallery_thumbs_i', function() {
+  var src = $(this).data('src');
+  $('.card-product_gallery').find('.card-product_gallery_thumbs_i').removeClass('__current');
+  $(this).addClass('__current');
+  $('.card-product_gallery').find('.card-product_gallery_preview').find('img').attr({src: src});
+});
+
 
 
 //****************************************************************************************************
@@ -75,6 +85,22 @@ $(function() {
       $nav.hide();
     }
 
+  });
+
+  //
+  // .. Cycle2 vertical carousel init
+  //
+  $('.vertical-carousel').each(function() {
+    var _this = this;
+    $(this).cycle({
+      fx: 'carousel',
+      timeout: 0,
+      carouselVisible: 4,
+      carouselVertical: true,
+      swipe: true,
+      prev: $(_this).siblings('.card-product_gallery_nav.__prev'),
+      next: $(_this).siblings('.card-product_gallery_nav.__next')
+    });
   });
 
   //

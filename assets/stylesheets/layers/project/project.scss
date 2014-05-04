@@ -510,8 +510,65 @@
  }
 
   .card-product_gallery {
-
+    position: relative;
+    margin-bottom: 5rem;
   }
+
+    .card-product_gallery_nav {
+      display: inline-block;
+      width: 82px;
+      height: 30px;
+      background-color: #f1f1f1;
+      color: #c3c3c3;
+      text-align: center;
+      line-height: 30px;
+      &.__prev {margin-bottom: 10px;}
+      &.__next {margin-top: 10px}
+    }
+    .card-product_gallery_thumbs {
+      position: absolute;
+      top: 0;
+      left: 0;      
+      .vertical-carousel {
+        height: 388px !important;
+      }
+    }
+      .card-product_gallery_thumbs_i {
+        border: 1px solid #f2f2f2;
+        vertical-align: top;
+        cursor: pointer;
+        &:not(:last-child) {margin-bottom: 20px;}
+        &.__current {border-color: #cfcfcf;}
+      }
+    .card-product_gallery {
+
+    }
+
+    .card-product_gallery_labels {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      text-align: left;
+    }
+      .card-product_gallery_label {
+        &:not(:last-child) {margin-bottom: 1rem;}
+        span {
+          display: inline-block;
+          padding: 0 2rem;
+          height: 3rem;
+          color: #fff;
+          vertical-align: top;
+          text-transform: uppercase;
+          font-size: 1.8rem;
+          line-height: 3.4rem;
+        }
+        &.__sale {
+          span {background-color: $major-color;}
+        }
+        &.__novelty {
+          span {background-color: $minor-color;}
+        }
+      }
 
   .card-product_brand {
     color: rgba(0, 0, 0, .8);

@@ -14,7 +14,7 @@
         .p-t_5
           
           %p.gamma.m-b_1
-            %a{href: "#"} Мужчинам
+            %a{href: "#"} Mужчинам
             = "/"
             %a{href: "#"} Одежда
             = "/"
@@ -29,6 +29,26 @@
                 .grid
                   .grid-i.__grid-6>
                     .card-product_gallery
+                      .card-product_gallery_thumbs
+                        %a.card-product_gallery_nav.__prev{href: "#"}
+                          %i.fa.fa-chevron-up
+                        .vertical-carousel
+                          %img.card-product_gallery_thumbs_i.__current{src: "/assets/images/fake/photo-thumb-1.png", width: 80, height: 80, alt: "Men's Coach Jacket", data: {src: "/assets/images/fake/photo-1.png"}}
+                          - 1.upto(4) do |i|
+                            %img.card-product_gallery_thumbs_i{src: "/assets/images/fake/product-#{i}.jpg", width: 80, height: 80, alt: "Men's Coach Jacket", data: {src: "/assets/images/fake/product-#{i}.jpg"}}
+                        %a.card-product_gallery_nav.__next{href: "#"}
+                          %i.fa.fa-chevron-down
+                      .card-product_gallery_preview
+                        %img.va-t{src: "/assets/images/fake/photo-1.png", width: "100%", alt: "Men's Coach Jacket"}
+                      .card-product_gallery_labels
+                        .card-product_gallery_label.__sale 
+                          %span Распродажа
+                        .card-product_gallery_label.__novelty 
+                          %span Новинка
+                    .tx.__center
+                      .pluso{data: {background: "none;", options: "small,square,line,horizontal,nocounter,sepcounter=1,theme=14", services: "vkontakte,odnoklassniki,facebook,twitter,google", user: "1938787731"}}
+                      :javascript
+                        (function(){if(window.pluso)if(typeof window.pluso.start=="function")return;if(window.ifpluso==undefined){window.ifpluso=1;var e=document,t=e.createElement("script"),n="getElementsByTagName";t.type="text/javascript";t.charset="UTF-8";t.async=true;t.src=("https:"==window.location.protocol?"https":"http")+"://share.pluso.ru/pluso-like.js";var r=e[n]("body")[0];r.appendChild(t)}})()
                   .grid-i.__grid-6>
                     .card-product_brand Quiksilver
                     .card-product_name Men's Coach Jacket
