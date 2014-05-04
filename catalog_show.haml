@@ -10,9 +10,118 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      %section.section{role: "region", "aria-label" => ""}
+      .ctn
+        .p-t_5
+          
+          %p.gamma.m-b_1
+            %a{href: "#"} Мужчинам
+            = "/"
+            %a{href: "#"} Одежда
+            = "/"
+            Теплые куртки
+
+      %section.section{role: "region", "aria-label" => "Product"}
         .ctn
-                  
+          .section_inner.__padding
+            .card-product
+    
+              .m-b_5
+                .grid
+                  .grid-i.__grid-6>
+                    .card-product_gallery
+                  .grid-i.__grid-6>
+                    .card-product_brand Quiksilver
+                    .card-product_name Men's Coach Jacket
+                    .card-product_price
+                      .grid
+                        .grid-i.__grid-3.va-m>
+                          %p.card-product_price_i.__new
+                            %span.format-money.__rub 24900
+                        .grid-i.__grid-3.va-m>
+                          %p.tx.__s.__voice.__upper.__700 Артикул: asd78291
+                          %p.tx.__s.__minor.__upper.__700 есть в наличии 
+                      %p.card-product_price_i.__old
+                        %del.format-money.__rub 26900
+                    .card-product_colors
+                      %h4.m-b_1 Цвет: красный
+                      %a.card-product_colors_i.__current{href: "#"}>
+                        %img.va-t.c-bg.__light{src: "/assets/images/blank.gif", width: 65, height: 65, alt: ""}
+                        .card-product_colors_i_preview{style: "background-color: #662126;"}
+                      - 1.upto(4) do
+                        %a.card-product_colors_i{href: "#"}>
+                          %img.va-t.c-bg.__light{src: "/assets/images/blank.gif", width: 65, height: 65, alt: ""}
+                          .card-product_colors_i_preview{style: "background-color: #662126;"}
+                    %ul.card-product_sizes
+                      %li.card-product_sizes_i.__current>
+                        %a.card-product_sizes_i_a{href: "#"} xxl
+                      %li.card-product_sizes_i>
+                        %a.card-product_sizes_i_a{href: "#"} xl
+                      %li.card-product_sizes_i>
+                        %a.card-product_sizes_i_a{href: "#"} s
+                      %li.card-product_sizes_i.__disabled>
+                        %a.card-product_sizes_i_a{href: "#"} m
+                      %li.card-product_sizes_i>
+                        %a.card-product_sizes_i_a{href: "#"} l
+                    .card-product_controls
+                      .grid
+                        .grid-i.__grid-4.va-m>
+                          %a.form-el.__btn.__extra.__major.__block{href: "#"} Добавить в корзину
+                        .grid-i.__grid-2.va-m>
+                          .form-el.__number.__large
+                            %p.number_control.__count 1
+                            %i.fa.fa-sort-desc.number_control.__up
+                            %i.fa.fa-sort-asc.number_control.__down
+                            %input{type: "hidden", value: "1"}
+
+              .grid
+                .grid-i.__grid-6>
+                  .card-product_recommendations
+                    %h2.title Рекомендуемые товары
+                    - 1.upto(3) do
+                      .m-b_3
+                        .grid
+                          .grid-i.__grid-2.va-m>
+                            %article.product.__no-border
+                              %a{href: "/catalog_show.html"}
+                                %img.va-t{src: "/assets/images/fake/product-#{rand(1..4)}.jpg", width: 126, hjeight: 126, alt: "Ghost Tree Down Jacket"}
+                              .product_labels
+                                .product_label.__sale 
+                                  %span Распродажа
+                                .product_label.__novelty 
+                                  %span Новинка
+                              %ul.product_colors
+                                %li.product_colors_i{style: "background-color: #662126;"}>
+                                %li.product_colors_i{style: "background-color: #23283b;"}>
+                                %li.product_colors_i{style: "background-color: #e6441d;"}>
+                          .grid-i.__grid-4.va-m>
+                            %p.tx.__l.__upper.__700
+                              %a.tx.__voice{href: "/catalog_brand.html"} Quiksilver
+                            %h2
+                              %a{href: "/catalog_show.html"} Ghost Tree Down Jacket
+                            %p
+                              %span.beta.tx.__major.__400.format-money.__rub
+                                = rand(10000..99000)
+                              &nbsp;&nbsp;&nbsp;
+                              %del.tx.__l.format-money.__rub
+                                = rand(10000..99000)
+                .grid-i.__grid-6>
+                  .card-product_info
+                    .tabs
+                      %ul
+                        %li
+                          %a{href: "#tabs-1"} Информация
+                        %li
+                          %a{href: "#tabs-2"} Характеристики
+                      #tabs-1
+                        %article.cnt
+                          %p Я&nbsp;так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от&nbsp;этого. Ни&nbsp;одного штриха не&nbsp;мог&nbsp;бы я&nbsp;сделать, а&nbsp;никогда не&nbsp;был таким большим художником, как в&nbsp;эти  минуты.
+                          %p Когда от&nbsp;милой моей долины поднимается пар и&nbsp;полдневное солнце стоит над непроницаемой чащей темного леса и&nbsp;лишь редкий луч проскальзывает в&nbsp;его святая святых, а&nbsp;я&nbsp;лежу в&nbsp;высокой траве у&nbsp;быстрого ручья&nbsp;и, прильнув к&nbsp;земле, вижу тысячи всевозможных былинок и&nbsp;чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и&nbsp;мошек и&nbsp;чувствую близость всемогущего, создавшего нас по&nbsp;своему подобию, веяние вселюбящего, судившего нам парить в&nbsp;вечном блаженстве, когда взор мой туманится и&nbsp;все вокруг меня и&nbsp;небо надо мной запечатлены в&nbsp;моей душе, точно образ возлюбленной,&nbsp;&mdash; тогда, дорогой друг, меня часто томит мысль.
+                      #tabs-2
+                        %article.cnt
+                          %p Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я&nbsp;наслаждаюсь от&nbsp;всего сердца. Я&nbsp;совсем один и&nbsp;блаженствую в&nbsp;здешнем краю, словно созданном для таких, как&nbsp;я. 
+                          %p Я&nbsp;так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от&nbsp;этого. Ни&nbsp;одного штриха не&nbsp;мог&nbsp;бы я&nbsp;сделать, а&nbsp;никогда не&nbsp;был таким большим художником, как в&nbsp;эти  минуты.
+                          %p Когда от&nbsp;милой моей долины поднимается пар и&nbsp;полдневное солнце стоит над непроницаемой чащей темного леса и&nbsp;лишь редкий луч проскальзывает в&nbsp;его святая святых, а&nbsp;я&nbsp;лежу в&nbsp;высокой траве у&nbsp;быстрого ручья&nbsp;и, прильнув к&nbsp;земле, вижу тысячи всевозможных былинок и&nbsp;чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и&nbsp;мошек и&nbsp;чувствую близость всемогущего, создавшего нас по&nbsp;своему подобию, веяние вселюбящего, судившего нам парить в&nbsp;вечном блаженстве, когда взор мой туманится и&nbsp;все вокруг меня и&nbsp;небо надо мной запечатлены в&nbsp;моей душе, точно образ возлюбленной,&nbsp;&mdash; тогда, дорогой друг, меня часто томит мысль.
+
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
