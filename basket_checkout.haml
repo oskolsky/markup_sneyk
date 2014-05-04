@@ -10,7 +10,149 @@
     = Haml::Engine.new(File.read('views/layouts/_nav.haml')).render
     
     %main#main.main{role: "main"}
-      %section.section{role: "region", "aria-label" => ""}
+      .ctn
+        .p-t_5
+
+          %p.gamma.m-b_1
+            %a{href: "#"} Ваша корзина
+            = "/"
+            Оформление заказа
+
+          %section#section.section{role: "region", "aria-label" => "Profile"}
+            .section_inner.__padding
+              %form.form
+                .grid.__no-gutter
+                  .grid-i.__grid-5>
+                    .js-resize-to-max-height
+                    
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.alpha Ваши данные
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "Имя"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "Фамилия"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "E-mail"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "Номер телефона"}
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.beta Адрес доставки
+                        .form-el.__row.__block
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected"} Россия
+                              %option Украина
+                              %option Мордор
+                        .form-el.__row.__block
+                          .form-el.__select.__block.__fake
+                            %p &nbsp;
+                            %select.form-el.__select.__real
+                              %option{selected: "selected"} Нижегородская область
+                              %option Смоленская область
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "Город"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "Индекс"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "Улица"}
+                        .form-el.__row.__block
+                          %input.form-el.__tx.__large.__block{type: "text", placeholder: "Номер телефона"}
+                        .form-el.__row.__block
+                          %textarea.form-el.__textarea.__block{rows: 4, placeholder: "Сообщение"}
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.beta Акции и новинки
+                        .form-el.__row.__block.m-b_5
+                          %label.form-el.__label
+                            %span.form-el.__checkbox.__fake.__top
+                              %input.form-el.__checkbox.__real{type: "checkbox"}
+                            %span Получать информацию о акциях и новинках
+
+                  .grid-i.__grid-4>
+                    .js-resize-to-max-height
+
+                      .block.__gray.checkout-login-sneyk
+                        %h2.title Войти через фитнес портал
+                        %div.m-b_3
+                          %p.tx.__l Все поля будут заполнены автоматически
+                        %div.m-b_3
+                          %a.form-el.__btn.__large.__violet.__block{href: "#"} 
+                            Авторизация
+                            %img{src: "/assets/images/logo-s.png", width: 97, height: 19, alt: "Sneyk"}
+                        %div
+                          %p.tx.__s Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я&nbsp;наслаждаюсь от&nbsp;всего сердца.
+
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.beta Способ доставки
+                        .form-el.__row.__block.m-b_2
+                          .checkout-checkbox-item
+                            %label.form-el.__label
+                              %span.form-el.__checkbox.__fake.__top
+                                %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                              %span.tx.__700 Курьером по Москве
+                            %p.tx.__s Ни&nbsp;одного штриха не&nbsp;мог&nbsp;бы я&nbsp;сделать, а&nbsp;никогда не&nbsp;был таким большим художником, как в&nbsp;эти минуты. Когда от&nbsp;милой моей долины поднимается пар.
+                        .form-el.__row.__block
+                          .checkout-checkbox-item
+                            %label.form-el.__label
+                              %span.form-el.__checkbox.__fake.__top
+                                %input.form-el.__checkbox.__real{type: "checkbox"}
+                              %span.tx.__700 Самовывоз
+                            %p.tx.__s Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я&nbsp;наслаждаюсь от&nbsp;всего сердца.
+
+                      %fieldset.form-el.__fieldset.__block
+                        %legend.form-el.__legend.__block.beta Способ оплаты
+                        .form-el.__row.__block.m-b_2
+                          .checkout-checkbox-item
+                            %label.form-el.__label
+                              %span.form-el.__checkbox.__fake.__top
+                                %input.form-el.__checkbox.__real{type: "checkbox", checked: "checked"}
+                              %span.tx.__700 Налчиные
+                            %p.tx.__s Ни&nbsp;одного штриха  не&nbsp;мог&nbsp;бы  я&nbsp;сделать, а&nbsp;никогда не&nbsp;был таким большим художником, как в&nbsp;эти минуты. Когда от&nbsp;милой моей долины поднимается пар.
+                        .form-el.__row.__block.m-b_2
+                          .checkout-checkbox-item
+                            %label.form-el.__label
+                              %span.form-el.__checkbox.__fake.__top
+                                %input.form-el.__checkbox.__real{type: "checkbox"}
+                              %span.tx.__700 Пластиковые карты
+                            %p.tx.__s Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я&nbsp;наслаждаюсь от&nbsp;всего сердца.
+                        .form-el.__row.__block.m-b_2
+                          .checkout-checkbox-item
+                            %label.form-el.__label
+                              %span.form-el.__checkbox.__fake.__top
+                                %input.form-el.__checkbox.__real{type: "checkbox"}
+                              %span.tx.__700 Электронные деньги
+                            %p.tx.__s Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я&nbsp;наслаждаюсь от&nbsp;всего сердца.
+
+                  .grid-i.__grid-3>
+                    .block.__red.js-resize-to-max-height
+                      .checkout-block
+                        %div.m-b_5
+                          %h4.title В вашей корзине:
+                          .checkout-items
+                            - 1.upto(3) do
+                              .checkout-item
+                                %p.tx.__s.__upper 
+                                  %a{href: "#"} quicksilver
+                                %p.tx.__l.__upper.__700 Driver Seat Jacket
+                                %p.tx.__s.__upper 1 шт. &nbsp;&nbsp;&nbsp; цвет: красный &nbsp;&nbsp;&nbsp; размер: xl
+                                %p.tx.__l.__700
+                                  %span.format-money.__rub 24900
+                        .checkout-discont
+                          %h4.m-b_1 У вас есть код скидки?
+                          %input.checkout-discont_tx{type: "text", value: "SKFN473293648505"}
+                        %p.delta.title.m-b_0
+                          %span.tx.__400 Скидка по коду: 
+                          %span.format-money.__rub 2000
+                        %p.delta.title.m-b_0
+                          %span.tx.__400 доставка:
+                          бесплатно
+                        .checkout-total
+                          %p.delta.title Итоговая сумма: 
+                          %p.checkout-total_value
+                            %span.format-money.__rub 24900
+                          %a.form-el.__btn.__large.__default.__block{href: "#"} Оформить заказ
+
+      %section.section{role: "region", "aria-label" => "Checkout"}
         .ctn
                   
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render

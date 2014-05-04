@@ -124,8 +124,8 @@ input {
       line-height: 3.6rem;
     }
     &.__large {
-      height: 4.4rem;
-      line-height: 4.6rem;
+      height: 4.5rem;
+      line-height: 4.7rem;
     }
 
     //
@@ -133,6 +133,14 @@ input {
     //
     &.__default {background-color: #000;}
     &.__major   {background-color: $major-color;}
+    &.__violet  {
+      background-color: #8f5cb1;
+      img {
+        position: relative;
+        top: .4rem;
+        margin-left: 2rem;
+      }
+    }
   }
 
   //
