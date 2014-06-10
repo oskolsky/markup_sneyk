@@ -52,6 +52,8 @@ var paths = {
       './assets/javascripts/forms.js',
       './assets/javascripts/components.js',
       './assets/javascripts/application.js',
+      './assets/javascripts/fake.js',
+      './assets/javascripts/product.js',      
       './assets/javascripts/project.js'
     ],
     dest: './build/assets/javascripts'

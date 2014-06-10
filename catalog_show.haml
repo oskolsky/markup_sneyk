@@ -2,6 +2,7 @@
 %html.no-js{lang: "ru-RU"}
   %head
     %title Карточка товара / Каталог / Sneyk
+    %script{src: "/assets/javascripts/fake.js"}
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
@@ -62,30 +63,21 @@
                           %p.tx.__s.__minor.__upper.__700 есть в наличии 
                       %p.card-product_price_i.__old
                         %del.format-money.__rub 26900
-                    .card-product_colors
-                      %h4.m-b_1 Цвет: красный
-                      %a.card-product_colors_i.__current{href: "#"}>
-                        %img.va-t.c-bg.__light{src: "/assets/images/blank.gif", width: 65, height: 65, alt: ""}
-                        .card-product_colors_i_preview{style: "background-color: #662126;"}
-                      - 1.upto(4) do
-                        %a.card-product_colors_i{href: "#"}>
-                          %img.va-t.c-bg.__light{src: "/assets/images/blank.gif", width: 65, height: 65, alt: ""}
-                          .card-product_colors_i_preview{style: "background-color: #662126;"}
-                    %ul.card-product_sizes
-                      %li.card-product_sizes_i.__current>
-                        %a.card-product_sizes_i_a{href: "#"} xxl
-                      %li.card-product_sizes_i>
-                        %a.card-product_sizes_i_a{href: "#"} xl
-                      %li.card-product_sizes_i>
-                        %a.card-product_sizes_i_a{href: "#"} s
-                      %li.card-product_sizes_i.__disabled>
-                        %a.card-product_sizes_i_a{href: "#"} m
-                      %li.card-product_sizes_i>
-                        %a.card-product_sizes_i_a{href: "#"} l
+                    
+                    #flavors{style: "display: none;"}
+                      .m-b_3
+                        %h4.m-b_1 Вкус
+                        %ul.card-product_value
+                    
+                    #volumes{style: "display: none;"}
+                      .m-b_3
+                        %h4.m-b_1 Объем
+                        %ul.card-product_value
+                    
                     .card-product_controls
                       .grid
                         .grid-i.__grid-4.va-m>
-                          %a.form-el.__btn.__extra.__major.__block{href: "#"} Добавить в корзину
+                          %button.form-el.__btn.__extra.__major.__block#add-to-basket Добавить в корзину
                         .grid-i.__grid-2.va-m>
                           .form-el.__number.__large
                             %p.number_control.__count 1
@@ -145,3 +137,5 @@
       = Haml::Engine.new(File.read('views/layouts/_recently.haml')).render
       = Haml::Engine.new(File.read('views/layouts/_brand.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
+
+    = Haml::Engine.new(File.read('views/_jst.haml')).render

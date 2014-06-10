@@ -597,74 +597,48 @@
       &.__old {font-size: 2.4rem; color: $major-color;}
     }
 
-  .card-product_colors {
-    margin-bottom: 2rem;
-    padding: 2rem 2rem 3rem;
-    background-color: #f5f5f5;
-  }
-    .card-product_colors_i_preview {
-      position: absolute;
-      right: -.6rem;
-      bottom: -.6rem;
-      width: 1.6rem;
-      height: 1.6rem;
-      border: 1px solid #fff;
-    }
-
-  .card-product_sizes {
-    margin-bottom: 3rem;
-    padding: 1rem 1.5rem;
+  .card-product_value {    
+    padding: 1.5rem 0 .8rem 1.1rem;
     border: 1px solid #f1f1f1;
-    text-align: center;
   }
-    .card-product_sizes_i {
+    .card-product_value_i {
       display: inline-block;
-      width: 7.6rem;
-      height: 3.7rem;
-      border: 1px solid #666;
-      color: rgba(0, 0, 0, .8);
+      margin-bottom: 1rem;
+      width: 8rem;
+      height: 3.7rem;      
       vertical-align: top;
       line-height: 3.7rem;
       @include prefixes(box-sizing, border-box);
-      &:not(:last-child) {margin-right: 1rem;}
-      &.__disabled {
-        border-color: #ccc;
-        color: #ccc;
-      }
-      &.__current, &:hover {
-        &:not(.__disabled) {
-          border-color: #333; 
-          background-color: #333;
-          color: #fff;
-          .card-product_sizes_i_a {color: #fff;}
-        }
-        &.__disabled {
-          .card-product_sizes_i_a {color: #ccc;}
-        }
-      }
+      margin: 0 .3rem .7rem .4rem;
     }
-      .card-product_sizes_i_a {
+      .card-product_value_i_a {
         display: block;
+        border: 1px solid #666;
+        color: rgba(0, 0, 0, .8);
         color: inherit;
-        text-transform: uppercase;
+        text-align: center;
         font-weight: 700;
-        font-size: 2.4rem;
+        &.__disabled {
+          border-color: #ccc;
+          color: #ccc;
+          cursor: no-drop;
+        }
+        &.__current, &:hover {
+          &:not(.__disabled) {
+            border-color: #333; 
+            background-color: #333;
+            color: #fff;
+            .card-product_value_i_a {color: #fff;}
+          }
+          &.__disabled {
+            .card-product_value_i_a {color: #ccc;}
+          }
+        }
       }
 
   .card-product_controls {
 
   }
-    .card-product_colors_i {
-      position: relative;
-      display: inline-block;
-      width: 65px;
-      height: 65px;
-      border: 1px solid transparent;
-      &:not(:last-child) {margin-right: 1.5rem;}
-      &.__current, &:hover {
-        border-color: #ccc;
-      }
-    }
 
   .card-product_recommendations {
     .title {
